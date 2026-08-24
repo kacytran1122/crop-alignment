@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local data, caches, checkpoints, and training output
+data/
+**/data/
+work/
+**/work/
+runs/
+**/runs/
+runs_*/
+**/runs_*/
+logs/
+**/logs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# LaTeX build products (compiled PDFs are intentionally tracked)
+paper/*.aux
+paper/*.blg
+paper/*.brf
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+
+# Local tooling and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+.env
+.edl_token

@@ -1,0 +1,70 @@
+% WACV 2027 submission, Evaluations and Datasets track.
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[review,datasets]{wacv}
+
+\input{preamble}
+
+\definecolor{wacvblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=wacvblue]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+% cleveref is already loaded by wacv.sty (line 519) with [capitalize];
+% loading it again causes an option clash.
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+% wacv.sty loads cleveref at \AtEndPreamble and sets the house style there:
+% \cref gives "Sec." and \Cref gives "Section". We use \Cref for sections
+% throughout and \cref for equations, tables and figures.
+
+\def\wacvPaperID{*****} % *** Enter the WACV Paper ID here
+\def\confName{WACV}
+\def\confYear{2027}
+
+\newcommand{\kap}{\kappa}
+\newcommand{\A}{\mathcal{A}}
+% \mathbb{1} is not a glyph in the default fonts and renders as a struck symbol.
+\newcommand{\ind}[1]{\mathbf{1}\!\left[ #1 \right]}
+\newcommand{\own}{\mathrm{own}}
+\newcommand{\oth}{\mathrm{oth}}
+
+\begin{document}
+
+\title{Crop Alignment: A Structural-Null Test for Closed-Loop Labels\\
+in Segmentation Benchmarks}
+
+% Keep the release anonymous until the camera-ready author list is known.
+\author{Anonymous Authors}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/crop_alignment_test}
+\input{sections/implementation_verification}
+\input{sections/controlled_calibration}
+\input{sections/shortcut_cost}
+\input{sections/experimental_setup}
+\input{sections/cross_domain_evaluation}
+\input{sections/resolution_analysis}
+\input{sections/discussion}
+
+\paragraph{Code and data.}
+\iftoggle{wacvfinal}{The reproducibility package is available at
+\url{https://github.com/kacytran1122/crop-alignment}.}{Code and auditable
+artifacts are included in the anonymous supplementary submission. The public URL
+is withheld during double-blind review and is enabled in the camera-ready source.}
+
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{references}
+}
+
+\end{document}

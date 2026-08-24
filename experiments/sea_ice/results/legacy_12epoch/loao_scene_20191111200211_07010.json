@@ -1,0 +1,39 @@
+{
+  "miou": 0.536219299494849,
+  "per_iou": [
+    0.9999481912710995,
+    0.6087097072134479,
+    0.0
+  ],
+  "macro_f1": 0.5855805712462392,
+  "pix_acc": 0.9999481832169286,
+  "cm": [
+    [
+      163496795,
+      8015,
+      0
+    ],
+    [
+      456,
+      13181,
+      2
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "photon": "none",
+  "seed": 42,
+  "labels": "scene",
+  "split_col": "split",
+  "holdout_acq": "20191111200211_07010",
+  "n_train_acq": null,
+  "fusion": "deep",
+  "encoder": "resnet18",
+  "loss": "focal",
+  "best_val_miou": 0.9143280210605097,
+  "best_epoch": 12,
+  "minutes": 15.01
+}

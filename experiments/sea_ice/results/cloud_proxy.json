@@ -1,0 +1,104 @@
+[
+ {
+  "s2_datetime": "20191103T183459",
+  "n_scenes": 4,
+  "bright_frac": 0.9665430928606853,
+  "smooth_bright_frac": 0.2140759368953143
+ },
+ {
+  "s2_datetime": "20191104T194529",
+  "n_scenes": 3,
+  "bright_frac": 0.9358460711867348,
+  "smooth_bright_frac": 0.21433327290509038
+ },
+ {
+  "s2_datetime": "20191106T184459",
+  "n_scenes": 4,
+  "bright_frac": 0.8425683270249166,
+  "smooth_bright_frac": 0.22863085199519778
+ },
+ {
+  "s2_datetime": "20191111T193519",
+  "n_scenes": 1,
+  "bright_frac": 0.9543203208592594,
+  "smooth_bright_frac": 0.3327385134143943
+ },
+ {
+  "s2_datetime": "20191113T183459",
+  "n_scenes": 6,
+  "bright_frac": 0.928131741200842,
+  "smooth_bright_frac": 0.21373342985391866
+ },
+ {
+  "s2_datetime": "20191115T191509",
+  "n_scenes": 1,
+  "bright_frac": 0.6473983770589291,
+  "smooth_bright_frac": 0.2403399596202405
+ },
+ {
+  "s2_datetime": "20191116T184459",
+  "n_scenes": 4,
+  "bright_frac": 0.8116903819782276,
+  "smooth_bright_frac": 0.24007994160524637
+ },
+ {
+  "s2_datetime": "20191117T181509",
+  "n_scenes": 2,
+  "bright_frac": 0.8307306118018332,
+  "smooth_bright_frac": 0.22562137407678942
+ },
+ {
+  "s2_datetime": "20191118T174429",
+  "n_scenes": 1,
+  "bright_frac": 0.2922879694904744,
+  "smooth_bright_frac": 0.5845318606962734
+ },
+ {
+  "s2_datetime": "20191119T203629",
+  "n_scenes": 4,
+  "bright_frac": 0.5215816543718894,
+  "smooth_bright_frac": 0.19827944080891646
+ },
+ {
+  "s2_datetime": "20191120T200529",
+  "n_scenes": 4,
+  "bright_frac": 0.8958669115245809,
+  "smooth_bright_frac": 0.20363840133298053
+ },
+ {
+  "s2_datetime": "20191121T193519",
+  "n_scenes": 2,
+  "bright_frac": 0.8098561568900768,
+  "smooth_bright_frac": 0.20622953801973562
+ },
+ {
+  "s2_datetime": "20191122T190459",
+  "n_scenes": 1,
+  "bright_frac": 0.8213735264670453,
+  "smooth_bright_frac": 0.19126035351379045
+ },
+ {
+  "s2_datetime": "20191123T183459",
+  "n_scenes": 7,
+  "bright_frac": 0.7766912991150264,
+  "smooth_bright_frac": 0.2262646154908865
+ },
+ {
+  "s2_datetime": "20191124T194519",
+  "n_scenes": 2,
+  "bright_frac": 0.4998661427480783,
+  "smooth_bright_frac": 0.7919313123431381
+ },
+ {
+  "s2_datetime": "20191126T184459",
+  "n_scenes": 5,
+  "bright_frac": 0.7489289680566832,
+  "smooth_bright_frac": 0.21202710639458933
+ },
+ {
+  "s2_datetime": "20191127T181509",
+  "n_scenes": 1,
+  "bright_frac": 0.3253014740848378,
+  "smooth_bright_frac": 0.29932429767543645
+ }
+]

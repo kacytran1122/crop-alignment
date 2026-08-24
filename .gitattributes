@@ -1,0 +1,4 @@
+# Preserve the official WACV support files byte-for-byte, including upstream
+# comment whitespace.
+paper/wacv.sty -whitespace
+paper/ieeenat_fullname.bst -whitespace

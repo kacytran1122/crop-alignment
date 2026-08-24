@@ -1,0 +1,198 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[review,datasets]{wacv}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[pagebackref,breaklinks,colorlinks]{hyperref}
+
+\def\wacvPaperID{*****}
+\def\confName{WACV}
+\def\confYear{2027}
+
+\newcommand{\kap}{\kappa}
+
+\begin{document}
+
+\title{Crop Alignment: A Structural-Null Test for Closed-Loop Labels\\
+in Segmentation Benchmarks\\
+\vspace{4pt}\Large Supplementary Material}
+\author{Anonymous \confName{} Datasets Track submission\\Paper ID \wacvPaperID}
+\maketitle
+
+\section{Threats to validity and evidence inventory}
+
+\paragraph{The diagnostic has a narrow domain.} Crop alignment is defined only on
+pixels for which overlapping crops receive different labels. If that set is empty,
+there are no observations from which to estimate $\kap$. The method therefore
+cannot audit crop-invariant pseudo-label shortcuts or shortcuts unrelated to crop
+geometry. It would be incorrect to turn an empty set into a zero and call it a
+negative result.
+
+\paragraph{The contrast is not unique causal attribution.} A nonzero $\kap$ proves
+that a predictor changes with crop context on the disagreement set. The matched
+control removes the crop sensitivity learned under repaired labels, but it cannot
+guarantee that the only remaining treatment--control difference is imitation of the
+labeller. The experiments support a targeted diagnostic claim, not a mediation
+claim about a unique learning mechanism.
+
+\paragraph{The release has three evidence tiers.} The primary sea-ice aggregate is
+recomputed from 16 paired values in committed JSON. Flood calibration and cost rows,
+and the 60/120-epoch sea-ice results, are committed as summary logs. Raw predictions,
+checkpoints, and some per-run JSON are absent. Thus the compact artifact verifies
+aggregate arithmetic but cannot regenerate every prediction or training run. A
+seventeenth rounded sea-ice row without matching JSON is excluded from the primary
+claim.
+
+\section{Errors in our own analysis}
+\label{sec:errors}
+
+The main paper discloses the artifact-provenance failure that changes its headline
+sample. This appendix records that issue and the rest of the analysis audit. We
+report them for the same reason we report the benchmark audit: an error list that
+only contains errors which turned out not to matter is not an error list.
+
+Two patterns account for most of them. The first is that a wrong number is more
+dangerous than a crash, because a crash stops the pipeline and a wrong number
+propagates. The second is narrower and worse: a check that reports success over a
+failure. Five of the entries below are of that kind, marked \textbf{[silent]}. None of
+the five raised, and all five would have passed unnoticed.
+
+\subsection{Errors that changed a number we had written down}
+
+\paragraph{1. The lead statistic was the wrong statistic.} An earlier draft
+contrasted a spread of $0.1164$ against seed variance. That figure is the
+\emph{unpaired} standard deviation of levels, and every comparison it was supporting
+is paired, both arms on the same held-out acquisition, so acquisition difficulty
+cancels. The correct framing is a minimum detectable effect from the paired spread.
+The conclusion survived; the statistic did not.
+
+\paragraph{2. A fold exists only in a rounded text summary.}
+The committed JSON contains 16 aligned noisy/control folds and recomputes to
+$+0.1073$ ($t=12.88$). A text summary contains a seventeenth row and reports
+$+0.1106$ ($t=13.01$), but the corresponding per-fold machine-readable output is
+absent. An earlier draft promoted the text-only aggregate. The main paper now uses
+only the 16-fold result and discloses the gap; a larger number is not evidence when
+the release cannot reconstruct it.
+
+\paragraph{3. Significance computed after averaging away the variance.} Gate 3
+averaged confusion matrices across seeds and then bootstrapped, which removes seed
+variance from the interval. Recomputed as paired differences across the five seeds,
+none of the three contrasts is significant. Two claims stated as significant were
+withdrawn (\Cref{sec:withdrawn}).
+
+\paragraph{4. A $7.2\times$ contradiction between adjacent sections.} The deficit at
+two acquisitions appeared as $-0.0295$ from the controlled learning curve and
+$-0.2121$ from a different table. They are not two estimates of one quantity: they
+differ in data, in scoring convention, and in training budget. Presented on one axis
+they implied a disagreement that did not exist.
+
+\paragraph{5. Three spreads for one quantity.} The 12-epoch premium is recorded with
+$s = 0.0859$ in one runner header, $0.0910$ in the paper, and an implied $0.1003$
+behind a required-$n$ of 238 quoted in the same header. The current computation gives
+$0.0910$ and 197 reproducibly. The header predates a fix and was never recomputed.
+
+\paragraph{6. A hand-picked subset described as balanced.} The runner for the
+six-fold budget preview records its folds as ``the two largest, the two smallest, and
+the one negative fold.'' The benchmark has three negative folds. The preview included
+one, and excluded the largest fold, both of the two smallest positives, and the
+acquisition that later turns out to move most between training budgets. We had
+recorded the preview's failure as an error of subset size. It was a selection rule
+that was never checked against the data it claimed to describe.
+
+\paragraph{7. Bonferroni tolerance overstated.} A claim that every headline result
+survives a Bonferroni factor of 100 was true for two of three. The accuracy cost at
+$t = -4.27$ is $p = 0.0016$ on 10 degrees of freedom and tolerates a factor of about
+30. The main paper now states the weakest case rather than the strongest.
+
+\paragraph{8. A coefficient tested against the wrong reference.} The threshold-arm
+coefficient $\beta$ was tested against $0$, which it obviously differs from. The
+meaningful reference is $\beta = 1$, the value the difference in differences assumes.
+Against that reference $\hat{\beta} = 0.711$ is not significant, which is the honest
+reading and the one the paper reports.
+
+\paragraph{9. Independence claimed for nested settings.} Five dial settings were
+described as five independent tests. The dial nests them by construction and they
+share the same eleven events, so what they show is consistency across a sweep, not
+five separate results.
+
+\subsection{Checks that reported success over a failure}
+
+\paragraph{10. A convergence test nothing could satisfy \textbf{[silent]}.}
+\texttt{epoch\_control.py} asked whether \texttt{best\_epoch >= 60} for runs capped at
+60 epochs. No run can satisfy that, so the script printed ``every long run converged
+before the cap'' over best epochs of 59, 56 and 51. The criterion that carries meaning
+is whether early stopping ever fired.
+
+\paragraph{11. An octal literal that killed 33 of 55 jobs \textbf{[silent]}.} A sweep
+derived its parameter with \texttt{python -c "print(\$\{A\}/100.0)"} on a zero-padded
+tag. Python rejects \texttt{050} as a malformed octal literal, while \texttt{000} and
+\texttt{100} are both legal. Exactly the two ends of the sweep survived and all 33
+interior jobs died, and the loop announced completion with 22 of 55 results on disk.
+Running the sweep ends-first is the only reason this cost jobs rather than the claim.
+
+\paragraph{12. A type coercion that ate an underscore \textbf{[silent]}.}
+\texttt{pd.read\_json} coerced acquisition identifiers to \texttt{int64}, so a drift
+test matched nothing, reported ``0 complete folds'' and exited 0.
+
+\paragraph{13. A layout check that could not match its own pattern \textbf{[silent]}.}
+Overfull lines were counted with a shell command in which the doubled backslash was
+literal, so it reported zero while three tables overflowed their column. The error was
+found from a rendered page image, not from the log.
+
+\paragraph{14. A negative control that tested nothing \textbf{[silent]}.} To confirm
+the layout check could detect a fault, a deliberate break was introduced with a
+substitution whose pattern never matched. Nothing was broken, the check passed, and
+the pass was recorded as evidence that the check worked.
+
+\subsection{Errors that a build or a log would not report}
+
+\paragraph{15--16. Two control characters from shell quoting.} \verb|\times| became a
+tab, rendering ``2.7imes'' in the compiled PDF; \verb|\approx| became a BEL byte.
+Neither produced a build error and both exit 0. Both were introduced by escaping a
+LaTeX macro through a shell string, and both were found by scanning the source bytes
+rather than reading the log.
+
+\paragraph{17. A figure that contradicted its own text.} The main text declines to
+quote a required sample size for crop alignment, because the power formula returns a
+value below two and a paired test cannot estimate a variance from one fold. The figure
+drew that same quantity as a bar labelled ``1''.
+
+\paragraph{18. Four floats never referenced.} LaTeX does not warn about a table or
+figure that no text points at. Four were unreferenced, which also degraded their
+placement.
+
+\paragraph{19--20. A renumbering trap, twice.} A cross-reference to a section that did
+not yet exist has no heading to anchor against, so a renumbering pass moved it to a
+different section. The dangling-reference check passed both times, because the wrong
+target exists.
+
+\section{Claims withdrawn from an earlier version}
+\label{sec:withdrawn}
+
+\paragraph{Gate 3 significance.} ``Every difference is significant under the paired
+bootstrap'' and ``the true-photon arm is significantly worse than a constant'' were
+both stated in an earlier version. Recomputed at the run level across five seeds,
+neither holds. Withdrawn.
+
+\paragraph{The seed-variance framing.} An earlier version argued that acquisition
+spread exceeded seed variance using an unpaired standard deviation of levels.
+Recomputed as a paired quantity, seed variance is $0.31\%$ of the premium variance,
+which is a stronger statement than the one withdrawn, but the original argument was
+not evidence for it.
+
+\paragraph{``The leak is eliminated.''} Three nulls were accepted at $n = 3$ with a
+spread near $0.07$, where an effect of $0.03$ would have been undetectable.
+``Eliminated'' overstated ``not detected''. Because the release contains no
+independently justified equivalence margin, the revised paper treats these as
+underpowered absence-of-evidence statements and does not use them to claim
+elimination.
+
+\paragraph{A prediction we made and lost.} We derived a point prediction for the
+patch-versus-mosaic gap with nothing fitted. The intercept lands where theory puts it
+and the sign agrees on 14 of 17 folds, but the magnitude is out by a factor of 1.6 to
+1.9. The prediction is reported in the main paper as made and refused, rather than
+removed.
+
+\end{document}

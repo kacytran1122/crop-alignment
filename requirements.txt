@@ -1,0 +1,9 @@
+# Artifact verification, figure generation, and PDF QA
+numpy>=1.26,<3
+scipy>=1.11,<2
+pandas>=2,<4
+pyarrow>=14,<30
+rasterio>=1.3,<2
+matplotlib>=3.8,<4
+pypdf>=5,<7
+pymupdf>=1.24,<2

@@ -1,0 +1,90 @@
+[
+ {
+  "event": "bolivia",
+  "n_chips": 15,
+  "published": -20.44,
+  "recovered": -20.72999999999855,
+  "diff": -0.28999999999854964,
+  "agreement": 0.9602153531399491
+ },
+ {
+  "event": "ghana",
+  "n_chips": 53,
+  "published": -22.81,
+  "recovered": -23.999999999999062,
+  "diff": -1.1899999999990634,
+  "agreement": 0.9882444470415762
+ },
+ {
+  "event": "india",
+  "n_chips": 68,
+  "published": -21.56,
+  "recovered": -23.139999999998928,
+  "diff": -1.579999999998929,
+  "agreement": 0.9674686399394836
+ },
+ {
+  "event": "mekong",
+  "n_chips": 30,
+  "published": null,
+  "recovered": -23.459999999998978,
+  "diff": NaN,
+  "agreement": 0.9745335
+ },
+ {
+  "event": "nigeria",
+  "n_chips": 18,
+  "published": -21.94,
+  "recovered": -22.89999999999889,
+  "diff": -0.9599999999988889,
+  "agreement": 0.957255130216681
+ },
+ {
+  "event": "pakistan",
+  "n_chips": 28,
+  "published": -19.56,
+  "recovered": -20.239999999998474,
+  "diff": -0.6799999999984756,
+  "agreement": 0.8765673214285714
+ },
+ {
+  "event": "paraguay",
+  "n_chips": 67,
+  "published": -19.94,
+  "recovered": -21.439999999998662,
+  "diff": -1.4999999999986606,
+  "agreement": 0.9388820291943174
+ },
+ {
+  "event": "somalia",
+  "n_chips": 26,
+  "published": -21.06,
+  "recovered": -21.99999999999875,
+  "diff": -0.9399999999987507,
+  "agreement": 0.8862336538461538
+ },
+ {
+  "event": "spain",
+  "n_chips": 30,
+  "published": -25.13,
+  "recovered": -26.22999999999941,
+  "diff": -1.0999999999994117,
+  "agreement": 0.972034
+ },
+ {
+  "event": "sri-lanka",
+  "n_chips": 42,
+  "published": -21.69,
+  "recovered": -22.63999999999885,
+  "diff": -0.9499999999988482,
+  "agreement": 0.9689096755798506
+ },
+ {
+  "event": "usa",
+  "n_chips": 69,
+  "published": -22.62,
+  "recovered": -25.289999999999264,
+  "diff": -2.6699999999992627,
+  "agreement": 0.9764271070456076
+ }
+]

@@ -1,0 +1,52 @@
+============================================================================================
+KAPPA AGAINST A GENERATOR WHOSE CROP-DEPENDENCE WE SET
+  alpha = 0: one Otsu threshold per chip (crop-invariant control)
+  alpha = 1: threshold recomputed inside every crop (fully closed-loop)
+  artefact set held fixed at the alpha=1 labels, so all arms score the
+  same pixels; only the labels the model TRAINED on differ
+============================================================================================
+event            a=0.00     a=0.25     a=0.50     a=0.75     a=1.00
+Bolivia         +0.0259    +0.0393    +0.0423    +0.1255    +0.2369
+Ghana           +0.0237    +0.0589    +0.0841    +0.1229    +0.2418
+India           +0.0357    +0.0355    +0.0608    +0.1450    +0.2373
+Mekong          +0.0524    +0.0613    +0.1028    +0.1385    +0.2016
+Nigeria         +0.0828    +0.1049    +0.1272    +0.1634    +0.2505
+Pakistan        +0.0653    +0.1028    +0.1265    +0.1822    +0.2576
+Paraguay        +0.0692    +0.0972    +0.1523    +0.1973    +0.2577
+Somalia         +0.0811    +0.0957    +0.1078    +0.1864    +0.2511
+Spain           +0.0809    +0.1144    +0.1854    +0.1971    +0.2832
+Sri-Lanka       +0.0437    +0.0729    +0.1021    +0.1729    +0.2538
+USA             +0.0654    +0.1273    +0.1561    +0.1993    +0.2527
+--------------------------------------------------------------------------------------------
+mean            +0.0569    +0.0828    +0.1134    +0.1664    +0.2476
+sd               0.0220     0.0308     0.0422     0.0291     0.0198
+Omega            0.0807     0.0841     0.0897     0.0977     0.1135
+
+  11 events complete of 11;  artefact set = 24.71% of covered pixels
+
+============================================================================================
+1. IS THE CONTROL NULL?
+============================================================================================
+  kappa at alpha=0.00: mean +0.0569  sd 0.0220  t +8.59  range [+0.0237,+0.0828]
+  It is not exactly 0, and it should not be: Omega = 0.0807 at alpha=0,
+  so the network's own output already depends on the crop through padding
+  and receptive-field truncation. This is the resolution floor, and the
+  estimand the paper reports is the CONTRAST against it, never raw kappa.
+
+============================================================================================
+2. DOES KAPPA RISE WITH ALPHA?
+============================================================================================
+  contrast alpha=1.00 minus alpha=0.00
+    mean +0.1907  sd 0.0212  t +29.84  11/11 events positive  sign p = 0.00098
+
+  per-event rank correlation between alpha and kappa
+    mean rho +0.991   perfectly ordered in 10/11 events   min +0.900
+    a single event orders 5 levels correctly by chance with p = 0.0083
+
+============================================================================================
+3. IS THE RISE PROPORTIONAL?
+============================================================================================
+  kappa = +0.0404 + +0.1860 * alpha     r = +0.895   r^2 = 0.801
+  slope se 0.0127  t +14.61      intercept se 0.0078  t +5.18
+
+wrote runs_s1fc/summary.json

@@ -1,0 +1,60 @@
+\section{Related work}
+\label{sec:related}
+
+Closed-loop labelling sits between five literatures. The distinction this paper
+turns on is the one between shortcut learning and label noise.
+
+\paragraph{Shortcut learning.} Documented cases include
+hospital-specific tokens in chest radiographs~\cite{zech2018variable}, background
+rather than animal in wildlife recognition~\cite{beery2018terra}, and the general
+account of shortcut learning as a property of gradient descent rather than of any
+one dataset~\cite{geirhos2020shortcut, lapuschkin2019unmasking}. In each case the cue was identified after a model had already been trained and seen
+to generalise badly. Crop alignment is a forward test with a value known under the
+null, so it can be run before anyone has been surprised, and it names the cue in
+advance.
+
+\paragraph{Annotation artefacts.} The closest analogue is not in vision.
+Hypothesis-only baselines on natural language inference showed that labels were
+partly predictable from properties of the annotation process, and that leaderboard
+progress had been measuring that predictability~\cite{gururangan2018annotation,
+poliak2018hypothesis}. The failure is the same. The difference is that a
+crowdworker's habits cannot be recovered, whereas an algorithmic labeller can be. We
+invert one labeller to its constant in 17 of 17 folds and recover another labeller's
+threshold and its preprocessing kernel to within 0.25\,dB on 10 of 10
+events. Exact recovery lets us build the artefact with a dial instead of only detecting
+it.
+
+\paragraph{Label noise, and why this is not that.} The standard frame for imperfect
+labels is noise, with a large literature on robust losses, noise-transition
+estimation, and the observation that many test labels in standard benchmarks are
+simply wrong~\cite{song2022learning, northcutt2021confident,
+northcutt2021pervasive}. Closed-loop labels are the opposite of noise. Noise is
+unpredictable from the input, so a model cannot learn it. A crop-dependent label is
+deterministic in the model's own input, so a model learns it exactly. That is why
+closed-loop labels inflate measured performance where noise depresses it. Treating closed-loop labels as noise
+prescribes the wrong remedy, because robustness to them makes a model worse on the
+benchmark and better on the truth.
+
+\paragraph{Weak and programmatic supervision.} Labelling functions and
+foundation-model pseudo-labels are the practice that produces closed-loop labels at
+scale~\cite{ratner2017snorkel}. We measure one failure mode of that practice, and
+the failure is about where the labelling function reads from. A rule applied once per scene is
+fine. The same rule applied per crop is not.
+
+\paragraph{Benchmark statistics.} A separate line argues that benchmark comparisons
+are routinely reported without the variance or the power to support them, that seed
+and data-order variation can exceed the differences being
+claimed~\cite{bouthillier2021accounting, reimers2017reporting}, and that many
+published effects are underpowered~\cite{card2020little, damour2022underspecification}.
+Our required-sample-size framing in \Cref{sec:resolution} applies that argument to
+a benchmark whose independent unit is the acquisition and not the patch, and follows
+the standard practice of fixing a margin in advance~\cite{lakens2017equivalence}.
+
+\paragraph{Spatial validation.} In remote sensing and ecology, splitting
+spatially autocorrelated data at random inflates measured
+skill~\cite{roberts2017cross, ploton2020spatial}, and treating correlated
+observations as independent replicates has a name and a long
+history~\cite{hurlbert1984pseudoreplication}. Our protocol repairs are the standard
+remedies applied to a benchmark that used none of them. What we add is not the
+remedies but a measurement of what skipping them costs, stated as a required sample
+size.

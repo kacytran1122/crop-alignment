@@ -1,0 +1,27 @@
+\section{Introduction}
+\label{sec:intro}
+
+Auto-labelling made large segmentation benchmarks possible. It also made some of
+them circular, because the label is a deterministic function of the image the model
+receives. One measurable form of that circularity occurs when the labeller is run on
+crops and its answer changes with the crop. That failure is widely acknowledged and
+rarely quantified, in part because there has been no estimand with a value known in
+advance under the null that can be computed on a benchmark you did not build.
+
+This paper supplies one. We define crop alignment, prove its null, calibrate it
+against a labeller we control, measure what the thing it detects costs against human
+annotation, and release an implementation that runs on other people's data. We apply
+it to two benchmarks, and \Cref{sec:wild,sec:resolution} report what it finds there.
+
+Foundation-model masks are increasingly used as ground
+truth~\cite{kirillov2023segment}. When those masks are generated crop by crop, they
+can inherit the property tested here; scene-level pseudo-labels can still close the
+input--label loop but fall outside our diagnostic if they are crop-invariant. The
+adjacent literatures in \Cref{sec:related} diagnose related failures after the fact.
+What is scarce is a controlled measurement of this crop-dependent case.
+
+\paragraph{Terms.} A benchmark is \emph{closed-loop} when its labels are computed
+from the model's own input. \emph{Crop alignment} ($\kap$) is defined in
+\Cref{sec:kappa} and audits only the crop-dependent subset of such benchmarks. The
+\emph{artefact premium} is defined in
+\Cref{sec:resolution}, where it is also estimated.

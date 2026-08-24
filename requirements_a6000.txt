@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# CUDA wheels for RTX A6000 training. Select a different official PyTorch index
+# URL if the host CUDA driver requires it.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch>=2.3,<3
+torchvision>=0.18,<1
+segmentation-models-pytorch>=0.3.3,<1

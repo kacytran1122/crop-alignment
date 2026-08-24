@@ -1,0 +1,61 @@
+\section{Recommendations}
+\label{sec:recs}
+
+Generate labels once per scene, preserve nodata as an ignore class, split by
+acquisition with a receptive-field buffer, and score each source pixel once by
+mosaicking. Report a context-free baseline, $\kap$ and its matched control on a stated
+crop grid, and the required number of independent units. An empty artefact set means
+that $\kap$ cannot be estimated; the implementation reports this state explicitly,
+and it must not be read as evidence that the labels are shortcut-free.
+
+\section{Limitations}
+\label{sec:limits}
+
+\paragraph{Diagnostic scope.} $\kap$ requires overlapping crops whose labels
+disagree. It cannot test a crop-invariant automatic labeller, a scene-level
+pseudo-label shortcut, or any shortcut unrelated to crop geometry. An empty
+artefact set is therefore outside the estimand, not a successful negative result.
+
+\paragraph{Identification.} Nonzero $\kap$ certifies crop-dependent predictions on
+the artefact set. Even a positive treatment--control contrast does not uniquely
+prove that the network copied the labelling algorithm: the matched control estimates
+an architecture and optimisation floor, but label difficulty and training dynamics
+can still differ between arms. The result is a targeted diagnostic, not a causal
+mediation analysis.
+
+\paragraph{Scale and external validity.} We study two remote-sensing domains, two
+sensors, and two labelling families. Sea ice contributes 17 acquisitions and floods
+eleven events. The flood artefact is constructed and is absent from Sen1Floods11 as
+published; sea ice has no human reference labels. Neither setting establishes how
+often the failure occurs elsewhere.
+
+\paragraph{Estimand dependence.} $\kap$ is relative to the chosen crop size, stride,
+and weighting, so its magnitude does not travel between papers. It also does not
+directly quantify score inflation: our unfitted prediction $P(\A)\kap$ gets the sign
+right on 14 of 17 folds but misses the magnitude by a factor of 1.6--1.9 and has
+fold-level rank correlation $+0.216$.
+
+\paragraph{Evidence boundary.} The machine-readable sea-ice summary contains 16
+paired fold values, while a rounded text report contains an unmatched seventeenth.
+The flood dial and accuracy-cost event rows and the 60/120-epoch aggregates are also
+committed as summary logs. Raw predictions, checkpoints, and some per-run JSON are
+absent. The release therefore verifies the arithmetic of the supported aggregates;
+it does not reproduce training or regenerate every result end to end. We exclude the
+unmatched fold from the main result and keep longer-budget results as sensitivity
+evidence. The supplement inventories these tiers and the claims withdrawn from
+earlier drafts.
+
+\section{Conclusion}
+
+Closed-loop labelling is usually discussed as a kind of noise. It is the opposite of
+noise, because a model can learn it, and that is why it inflates measured performance
+rather than depressing it. We gave a test whose null follows from the definition
+rather than from a control arm, verified it against a case with a known answer,
+calibrated it on a labeller we could turn up and down, and showed that what it detects
+costs accuracy against human annotation. On the benchmark where the artefact occurred
+naturally the paired contrast is $+0.1073$ across all 16 folds with machine-readable
+evidence. At the initial mosaic-scored budget, however, the aggregate artefact
+premium itself is unresolved (required $n=197$ versus 17 available acquisitions),
+and the stronger longer-budget result is summary-log evidence only. Crop alignment
+makes one specific shortcut measurable; the provenance audit defines which claims
+the current release can support.
