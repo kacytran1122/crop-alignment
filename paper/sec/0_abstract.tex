@@ -1,33 +1,28 @@
 \begin{abstract}
-Some automated segmentation pipelines fit context-dependent label rules inside each
-crop. Overlapping crops can then assign different labels to the same source pixel.
-Under patch-wise scoring, a model can be rewarded for following the crop-specific
-label instead of the scene.
+Automated segmentation benchmarks often label each crop independently. If two
+overlapping crops show the same source pixel but receive different labels, patch-wise
+evaluation can reward a model for following the crop window rather than the scene.
 
-We introduce crop-label alignment, $\kap$ (distinct from Cohen's kappa). On pixels
-whose crop-specific labels disagree, it measures whether predictions follow the
-label in the crop being read more often than labels from other covering crops. For
-any fixed crop-invariant predictor, $\kap=0$ algebraically. This removes the need to
-simulate a null; attributing a nonzero measurement to the training labels still
-requires a matched control. A per-pixel threshold yields
-$|\kap|<1.4\times10^{-15}$ in our implementation.
+We study this shortcut with crop-label alignment, $\kap$ (distinct from Cohen's
+kappa). On pixels where overlapping crop labels disagree, it asks whether a
+prediction follows the label in the crop being read more often than labels from
+other crops covering the same pixel. Any fixed crop-invariant predictor has
+$\kap=0$ algebraically, so the null need not be simulated; attribution still
+requires a matched control. A per-pixel threshold gives
+$|\kap|<1.4\times10^{-15}$.
 
-We calibrate the diagnostic on Sen1Floods11 (Sentinel-1, 11 flood events) using a
-dial from its published event threshold to thresholds fitted inside crops. On the
-fixed disagreement set ($24.71\%$ of covered pixels), the end-to-end contrast is
-$+0.2613$. After averaging seeds, the five levels are ordered in every held-out
-event; after averaging events, they are ordered at each of three training seeds.
-The same construction changes both the mean threshold and label quality. Its
-$-0.29$ expert-label mIoU difference is descriptive and does not isolate causal cost.
+On Sen1Floods11 (Sentinel-1, 11 flood events), we move from the published event
+threshold toward thresholds fitted within crops. On the fixed disagreement set
+($24.71\%$ of covered pixels), the end-to-end contrast is $+0.2613$. The five dial
+levels are ordered in every held-out event after averaging seeds and at every
+training seed after averaging events. Because threshold mean and label quality also
+change, the $-0.29$ expert-label mIoU difference is descriptive rather than causal.
 
-Surveys without trained models show that crop-adaptive SAR rules produce disagreement
-on 12--18\% of covered pixels, while fixed and scene-fitted variants produce none.
-On external imagery, a published colour labeller applied per crop yields $37.04\%$;
-fitting its context once per scene yields zero.
-
-On a 17-acquisition sea-ice benchmark assembled from that published pipeline,
-$P(\A)=13.22\%$ and the optical-only primary model trained on per-patch labels yields
-$\kap=+0.1518$, compared with $+0.0097$ for a matched scene-label control. The
-$+0.1421$ contrast is positive in all 17 dependent folds; tested code and outputs
-are released.
+Label-only surveys show crop-adaptive SAR disagreement on 12--18\% of covered
+pixels, while fixed and scene-fitted variants produce none. On external imagery, a
+published colour labeller gives $37.04\%$ per-crop disagreement and zero when fitted
+once per scene. On a 17-acquisition sea-ice benchmark from that pipeline,
+$P(\A)=13.22\%$; the optical-only primary model gives $\kap=+0.1518$, versus
+$+0.0097$ for a matched scene-label control. The $+0.1421$ contrast is positive in
+all 17 dependent folds. Code: \url{\anonymousCodeURL}.
 \end{abstract}

@@ -28,13 +28,13 @@ Resubmission flag:
 No
 
 Abstract:
-Some segmentation benchmarks use labels made automatically from the same image crops given to the model. This can create a hidden shortcut. When the labelling rule changes its answer from one crop to another, two crops can give different labels to the same place in the original scene. A model may then look good on the benchmark because it follows the crop-specific labeller, not because it understands the real object or surface being studied.
+Some segmentation benchmarks label each image crop independently. That can create a hidden shortcut. The same location in the original scene may appear in two overlapping crops, but the automatic labelling rule may assign different labels because it was fitted separately inside each crop window. A model can then look strong on the benchmark by following the crop-specific label, even when it has not learned the real object or surface the benchmark is meant to measure.
 
-We introduce crop-label alignment, a test for finding this shortcut. The test looks only at places where overlapping crops disagree. It asks whether the model follows the label attached to the crop it is currently reading more often than labels assigned by other crops covering the same place. If a model truly ignores crop context, the test should read zero.
+We introduce crop-label alignment, a simple test for this shortcut. The test focuses only on places where overlapping crops disagree. It asks whether the model follows the label attached to the crop it is currently reading more often than labels assigned by other crops covering the same place. If a model truly ignores crop context, the test should show no crop-label alignment.
 
-We check the test in settings where the amount of crop dependence is controlled, then apply it to remote-sensing segmentation benchmarks with automatic labels. The results show that crop-dependent labelling can create measurable shortcuts, and that ordinary patch-based scoring can reward models for learning those shortcuts.
+We evaluate the test in settings where crop dependence can be controlled, then apply it to remote-sensing segmentation benchmarks with automatic labels. The results show that crop-dependent labelling can create measurable shortcuts, and that ordinary patch-based scoring can reward models for learning those shortcuts.
 
-The method is intentionally narrow. It does not prove that every automatic label is flawed, and it does not detect shortcuts that stay the same across crops. Its purpose is to give reviewers and benchmark builders a simple way to audit one important failure mode before trusting model comparisons.
+The method is intentionally narrow. It does not prove that every automatic label is flawed, and it does not detect shortcuts unrelated to crop windows. Its purpose is to give reviewers and benchmark builders a practical audit for one important failure mode before trusting model comparisons.
 
 Files to upload:
 - Main paper: paper/main.pdf
