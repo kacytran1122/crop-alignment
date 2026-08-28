@@ -88,8 +88,9 @@ def report(labels):
 
     lo = [r for r in rows[:3]]
     hi = [r for r in rows[3:]]
+    lowest = ", ".join(f"{r['rarest_present']*100:.3f}%" for r in lo)
     print(f"\nrarest-class prevalence, 3 lowest folds:  "
-          f"{', '.join(f'{r['rarest_present']*100:.3f}%' for r in lo)}")
+          f"{lowest}")
     print(f"rarest-class prevalence, other {len(hi)} folds: "
           f"median {np.median([r['rarest_present'] for r in hi])*100:.3f}%, "
           f"min {min(r['rarest_present'] for r in hi)*100:.3f}%")

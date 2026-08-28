@@ -11,7 +11,7 @@ Title:
 Crop-Label Alignment: Auditing Crop-Dependent Auto-Labels in Remote-Sensing Segmentation
 
 Authors, in order:
-Chau Tran and Santosh Pant (co-first authors; equal contribution note for camera-ready)
+Santosh Pant and Chau Tran (co-first authors; equal contribution note for camera-ready)
 Dipsha Budhathoki
 Arito Nakamichi
 
