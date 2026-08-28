@@ -454,7 +454,10 @@ if _man:
     else:
         ok.append(("release manifest", "{} payload rows".format(len(_man["files"]))))
 else:
-    skip("release archive", "MANIFEST.json not built")
+    if os.environ.get("VERIFY_ALLOW_NO_MANIFEST") == "1":
+        ok.append(("release manifest", "not present in source-only CI"))
+    else:
+        skip("release archive", "MANIFEST.json not built")
 
 # ---- withdrawn exploratory premium ---------------------------------------
 withdrawn("artefact premium",

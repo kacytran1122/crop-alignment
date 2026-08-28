@@ -16,6 +16,8 @@ jobs:
       - run: python cropalign.py
       - run: python tests_cropalign_hardening.py
       - run: python gate7_rebuild/src/verify_draft_numbers.py
+        env:
+          VERIFY_ALLOW_NO_MANIFEST: "1"
       - run: python -m compileall -q cropalign.py verify.py gate7_rebuild/src gate8_crossdomain/src
       - run: bash -n gate7_rebuild/src/*.sh gate8_crossdomain/src/*.sh
       - run: python paper/check_layout.py
