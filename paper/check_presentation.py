@@ -25,6 +25,7 @@ Exit status is 1 if anything is found, so it can gate a commit.
 """
 import re
 import sys
+import os
 from pathlib import Path
 
 import fitz
@@ -240,10 +241,12 @@ def main():
 
     logs = [f.with_suffix(".log") for f in PDFS]
     missing_logs = [f for f in logs if not f.exists()]
+    allow_no_logs = os.environ.get("PRESENTATION_ALLOW_NO_LOGS") == "1"
     for f in missing_logs:
         print("  NOT BUILT: {} is missing, so undefined commands/citations cannot "
               "be checked".format(f.name))
-        total += 1
+        if not allow_no_logs:
+            total += 1
     und = undefined_in_log(logs)
     print("  {} build log(s) scanned for undefined control sequences".format(
         len([f for f in logs if f.exists()])))

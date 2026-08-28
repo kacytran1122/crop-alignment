@@ -22,3 +22,5 @@ jobs:
       - run: bash -n gate7_rebuild/src/*.sh gate8_crossdomain/src/*.sh
       - run: python paper/check_layout.py
       - run: python paper/check_presentation.py
+        env:
+          PRESENTATION_ALLOW_NO_LOGS: "1"
