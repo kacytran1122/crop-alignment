@@ -1,0 +1,346 @@
+{
+ "schema": 1,
+ "description": "Exact bytes of the 68 retained historical sea-ice test_metrics.json files, exported without a machine path.",
+ "records": [
+  {
+   "run": "loao_original_20191103184432_05780_s7",
+   "source_sha256": "83d2e049365f203aabb12b57bea0721fc28f9af1feb2fcb16fcf7676f3494439",
+   "test_metrics_text": "{\n  \"miou\": 0.8608546411883218,\n  \"per_iou\": [\n    0.9160251741512259,\n    0.7327048607872925,\n    0.9338338886264472\n  ],\n  \"macro_f1\": 0.9225642396562771,\n  \"pix_acc\": 0.9318447265625,\n  \"cm\": [\n    [\n      120943270,\n      10294699,\n      84\n    ],\n    [\n      792444,\n      30609320,\n      45127\n    ],\n    [\n      12,\n      34194,\n      1120850\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191103184432_05780\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.869250944842861,\n  \"best_epoch\": 12,\n  \"minutes\": 14.13\n}"
+  },
+  {
+   "run": "loao_original_20191103184432_05780_s42",
+   "source_sha256": "12c12dbdef596fc8c19f8fcdcc0d1b1b98f096fd7eeba2a093bc35e2abae005f",
+   "test_metrics_text": "{\n  \"miou\": 0.8691356321235948,\n  \"per_iou\": [\n    0.9232299537252376,\n    0.7486186227618046,\n    0.9355583198837419\n  ],\n  \"macro_f1\": 0.9276763951823094,\n  \"pix_acc\": 0.93758916015625,\n  \"cm\": [\n    [\n      122046140,\n      9191737,\n      176\n    ],\n    [\n      956674,\n      30450865,\n      39352\n    ],\n    [\n      9,\n      37444,\n      1117603\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191103184432_05780\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8802986363710135,\n  \"best_epoch\": 12,\n  \"minutes\": 24.28\n}"
+  },
+  {
+   "run": "loao_scene_20191103184432_05780_s7",
+   "source_sha256": "dcb5f0cfc2924d993aef2ffd85b9e26f7ce6e9b88411258eea5392002d0cbe87",
+   "test_metrics_text": "{\n  \"miou\": 0.8478287413230742,\n  \"per_iou\": [\n    0.9769072618788568,\n    0.8530443079902182,\n    0.7135346541001475\n  ],\n  \"macro_f1\": 0.9139452396610716,\n  \"pix_acc\": 0.9792811074695585,\n  \"cm\": [\n    [\n      139750637,\n      2512401,\n      0\n    ],\n    [\n      791111,\n      19591106,\n      39689\n    ],\n    [\n      0,\n      31799,\n      178064\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191103184432_05780\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8987890269435289,\n  \"best_epoch\": 11,\n  \"minutes\": 12.57\n}"
+  },
+  {
+   "run": "loao_scene_20191103184432_05780_s42",
+   "source_sha256": "6aa462a3dacae1ee69ae03dbe2bd37ccc3bcb79388bcac13c113945f96950a1c",
+   "test_metrics_text": "{\n  \"miou\": 0.8513175547338742,\n  \"per_iou\": [\n    0.9764086401031483,\n    0.8512476527220295,\n    0.7262963713764443\n  ],\n  \"macro_f1\": 0.91638714005511,\n  \"pix_acc\": 0.9788810640231153,\n  \"cm\": [\n    [\n      139588877,\n      2674160,\n      1\n    ],\n    [\n      698496,\n      19686624,\n      36786\n    ],\n    [\n      0,\n      30722,\n      179141\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191103184432_05780\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8985019972559781,\n  \"best_epoch\": 11,\n  \"minutes\": 24.34\n}"
+  },
+  {
+   "run": "loao_original_20191104195311_05940_s7",
+   "source_sha256": "a3fea04e77d0778a0c1fed514beda9e07c0cd30748e637a23563ac776eb3b620",
+   "test_metrics_text": "{\n  \"miou\": 0.8579513863247481,\n  \"per_iou\": [\n    0.9182630138906056,\n    0.7799269889273276,\n    0.8756641561563111\n  ],\n  \"macro_f1\": 0.9224865136009669,\n  \"pix_acc\": 0.9346686096191407,\n  \"cm\": [\n    [\n      106620165,\n      8909083,\n      10349\n    ],\n    [\n      571005,\n      37896994,\n      979719\n    ],\n    [\n      102,\n      233637,\n      8618946\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191104195311_05940\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8707858860841323,\n  \"best_epoch\": 11,\n  \"minutes\": 13.93\n}"
+  },
+  {
+   "run": "loao_original_20191104195311_05940_s42",
+   "source_sha256": "f7642ca015a97765b1a7a17a81a5057b9ab6a1c0d466ea91db7cf6c5aaaf2484",
+   "test_metrics_text": "{\n  \"miou\": 0.8735701739191107,\n  \"per_iou\": [\n    0.9189866021299049,\n    0.7890856335453305,\n    0.912638286082097\n  ],\n  \"macro_f1\": 0.931405913124061,\n  \"pix_acc\": 0.9375675109863282,\n  \"cm\": [\n    [\n      106761584,\n      8771802,\n      6211\n    ],\n    [\n      633561,\n      38245857,\n      568300\n    ],\n    [\n      9,\n      249056,\n      8603620\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191104195311_05940\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8759816480208648,\n  \"best_epoch\": 12,\n  \"minutes\": 12.66\n}"
+  },
+  {
+   "run": "loao_scene_20191104195311_05940_s7",
+   "source_sha256": "e32705aee80c60c769272eea0c295675903eeece911c196ac46819bee06a69e7",
+   "test_metrics_text": "{\n  \"miou\": 0.906627469694408,\n  \"per_iou\": [\n    0.970567375630642,\n    0.8544253204950486,\n    0.8948897129575334\n  ],\n  \"macro_f1\": 0.950364083038658,\n  \"pix_acc\": 0.9717629230574505,\n  \"cm\": [\n    [\n      123743726,\n      3469421,\n      4482\n    ],\n    [\n      278647,\n      26873891,\n      617148\n    ],\n    [\n      0,\n      213485,\n      7110016\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191104195311_05940\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9027703981192886,\n  \"best_epoch\": 12,\n  \"minutes\": 12.6\n}"
+  },
+  {
+   "run": "loao_scene_20191104195311_05940_s42",
+   "source_sha256": "bac0d8049657f9dd16f690f295c197978d435190e9db366c75363aa441a10432",
+   "test_metrics_text": "{\n  \"miou\": 0.906309648856876,\n  \"per_iou\": [\n    0.9678766019815996,\n    0.8478283423060987,\n    0.9032240022829294\n  ],\n  \"macro_f1\": 0.9501586792353245,\n  \"pix_acc\": 0.9701032554725126,\n  \"cm\": [\n    [\n      123327217,\n      3888456,\n      1956\n    ],\n    [\n      202764,\n      27025294,\n      541628\n    ],\n    [\n      0,\n      217761,\n      7105740\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191104195311_05940\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9039732873111205,\n  \"best_epoch\": 11,\n  \"minutes\": 12.66\n}"
+  },
+  {
+   "run": "loao_original_20191106190152_06240_s7",
+   "source_sha256": "7001ad8c2f14deffa7917497809f46132fe8d816165fabdd2842d571148fd403",
+   "test_metrics_text": "{\n  \"miou\": 0.8721910681969165,\n  \"per_iou\": [\n    0.8896153150517143,\n    0.7713304964914787,\n    0.9556273930475567\n  ],\n  \"macro_f1\": 0.9299330134897453,\n  \"pix_acc\": 0.9265228576660156,\n  \"cm\": [\n    [\n      89175226,\n      9653903,\n      54250\n    ],\n    [\n      1353107,\n      40411778,\n      494459\n    ],\n    [\n      3724,\n      479052,\n      22214501\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191106190152_06240\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8527030024913356,\n  \"best_epoch\": 11,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191106190152_06240_s42",
+   "source_sha256": "5af42a6aa1b67b43f4f1ce7c95b4752e19d1fe4d83b019156b354b649aca1f55",
+   "test_metrics_text": "{\n  \"miou\": 0.8676107049467595,\n  \"per_iou\": [\n    0.8881207979884584,\n    0.7661483790492201,\n    0.9485629378025999\n  ],\n  \"macro_f1\": 0.927313539473635,\n  \"pix_acc\": 0.9247151000976562,\n  \"cm\": [\n    [\n      89238511,\n      9536453,\n      108415\n    ],\n    [\n      1593168,\n      40044072,\n      622104\n    ],\n    [\n      3603,\n      470935,\n      22222739\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191106190152_06240\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8636027362532811,\n  \"best_epoch\": 12,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_scene_20191106190152_06240_s7",
+   "source_sha256": "daefca9b6bf2e048cf848599a3f6e9a1efac8b75f13eae2077d025344149ccd3",
+   "test_metrics_text": "{\n  \"miou\": 0.8829893477187961,\n  \"per_iou\": [\n    0.9134738391994195,\n    0.7795618631186111,\n    0.9559323408383578\n  ],\n  \"macro_f1\": 0.9361260635923898,\n  \"pix_acc\": 0.9379929873040134,\n  \"cm\": [\n    [\n      96097510,\n      7785275,\n      4731\n    ],\n    [\n      1311876,\n      35430693,\n      512638\n    ],\n    [\n      676,\n      409013,\n      20110093\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191106190152_06240\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9053663523402066,\n  \"best_epoch\": 12,\n  \"minutes\": 12.6\n}"
+  },
+  {
+   "run": "loao_scene_20191106190152_06240_s42",
+   "source_sha256": "ec568615fdd0299b82b6ba95c392aab2b343bea039f3eb1f4f05db19977d1950",
+   "test_metrics_text": "{\n  \"miou\": 0.8820798712772766,\n  \"per_iou\": [\n    0.9124329982444235,\n    0.7762461301322502,\n    0.9575604854551559\n  ],\n  \"macro_f1\": 0.9355206164757558,\n  \"pix_acc\": 0.9373503274615224,\n  \"cm\": [\n    [\n      96311929,\n      7569958,\n      5629\n    ],\n    [\n      1666964,\n      35114804,\n      473439\n    ],\n    [\n      590,\n      411523,\n      20107669\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191106190152_06240\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9083989974862609,\n  \"best_epoch\": 11,\n  \"minutes\": 14.92\n}"
+  },
+  {
+   "run": "loao_original_20191111200211_07010_s7",
+   "source_sha256": "954188f9088dbd4b3d4a163b978f508181ee5108f7353041a84fbfee1d5d1da6",
+   "test_metrics_text": "{\n  \"miou\": 0.6292581730762149,\n  \"per_iou\": [\n    0.5132819310742907,\n    0.3795764596032573,\n    0.9949161285510967\n  ],\n  \"macro_f1\": 0.7420334972134309,\n  \"pix_acc\": 0.6256885681152343,\n  \"cm\": [\n    [\n      64672545,\n      59673986,\n      0\n    ],\n    [\n      1651563,\n      37520104,\n      251\n    ],\n    [\n      0,\n      1385,\n      320166\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191111200211_07010\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8653473245184075,\n  \"best_epoch\": 11,\n  \"minutes\": 12.59\n}"
+  },
+  {
+   "run": "loao_original_20191111200211_07010_s42",
+   "source_sha256": "98d1ffb46b74f8f1e5c530172c9cf577c5742bdb450ed834643be88ee7c6d9cf",
+   "test_metrics_text": "{\n  \"miou\": 0.6640711524344338,\n  \"per_iou\": [\n    0.5881356821050966,\n    0.40608040598336675,\n    0.9979973692148382\n  ],\n  \"macro_f1\": 0.772421891501826,\n  \"pix_acc\": 0.6792613647460938,\n  \"cm\": [\n    [\n      75039383,\n      49307148,\n      0\n    ],\n    [\n      3242026,\n      35929866,\n      26\n    ],\n    [\n      0,\n      618,\n      320933\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191111200211_07010\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.863028986836066,\n  \"best_epoch\": 7,\n  \"minutes\": 14.89\n}"
+  },
+  {
+   "run": "loao_scene_20191111200211_07010_s7",
+   "source_sha256": "44739c591b17c769d2a4abe7b40aa6a3ffef76781fe74cddebbb03a91f6ca1c3",
+   "test_metrics_text": "{\n  \"miou\": 0.5267807437237417,\n  \"per_iou\": [\n    0.9999431701383614,\n    0.5803990610328639,\n    0.0\n  ],\n  \"macro_f1\": 0.5781561426435068,\n  \"pix_acc\": 0.9999431562612241,\n  \"cm\": [\n    [\n      163496297,\n      8513,\n      0\n    ],\n    [\n      779,\n      12857,\n      3\n    ],\n    [\n      0,\n      0,\n      0\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191111200211_07010\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9152827412409499,\n  \"best_epoch\": 12,\n  \"minutes\": 12.71\n}"
+  },
+  {
+   "run": "loao_scene_20191111200211_07010_s42",
+   "source_sha256": "44731e4c595e71c78e5ec7321ac9ce3dd5e8e0d96a7db4610a9f044800e7ade4",
+   "test_metrics_text": "{\n  \"miou\": 0.536219299494849,\n  \"per_iou\": [\n    0.9999481912710995,\n    0.6087097072134479,\n    0.0\n  ],\n  \"macro_f1\": 0.5855805712462392,\n  \"pix_acc\": 0.9999481832169286,\n  \"cm\": [\n    [\n      163496795,\n      8015,\n      0\n    ],\n    [\n      456,\n      13181,\n      2\n    ],\n    [\n      0,\n      0,\n      0\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191111200211_07010\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9143280210605097,\n  \"best_epoch\": 12,\n  \"minutes\": 15.01\n}"
+  },
+  {
+   "run": "loao_original_20191113191053_07310_s7",
+   "source_sha256": "2f27319d228a9721a2e5d8f703806bd1a0a9282b480201bdf1c91d5eaa65b895",
+   "test_metrics_text": "{\n  \"miou\": 0.8892015489706369,\n  \"per_iou\": [\n    0.9202066722690803,\n    0.8037135846539409,\n    0.9436843899888895\n  ],\n  \"macro_f1\": 0.9402161048564119,\n  \"pix_acc\": 0.9416324523925781,\n  \"cm\": [\n    [\n      99939572,\n      7559621,\n      11761\n    ],\n    [\n      1094450,\n      39107528,\n      493311\n    ],\n    [\n      168,\n      403628,\n      15229961\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191113191053_07310\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8633882197399574,\n  \"best_epoch\": 11,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191113191053_07310_s42",
+   "source_sha256": "f1c68b7cf715ad778387ae37826a5a63e06afcce434daeb59338c6f1bf79441a",
+   "test_metrics_text": "{\n  \"miou\": 0.8888930560057848,\n  \"per_iou\": [\n    0.9179312485753103,\n    0.8015126789949993,\n    0.947235240447045\n  ],\n  \"macro_f1\": 0.9399781134276776,\n  \"pix_acc\": 0.9405466613769531,\n  \"cm\": [\n    [\n      99601127,\n      7898858,\n      10969\n    ],\n    [\n      994757,\n      39288708,\n      411824\n    ],\n    [\n      375,\n      424052,\n      15209330\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191113191053_07310\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8613648939807349,\n  \"best_epoch\": 9,\n  \"minutes\": 14.91\n}"
+  },
+  {
+   "run": "loao_scene_20191113191053_07310_s7",
+   "source_sha256": "a545283a08122c4786aa95574b411ff86a6f2d06583a9490bcfb2cfaf21d8813",
+   "test_metrics_text": "{\n  \"miou\": 0.9168963317938158,\n  \"per_iou\": [\n    0.9605103896197997,\n    0.8442616208887094,\n    0.9459169848729382\n  ],\n  \"macro_f1\": 0.9558731899014452,\n  \"pix_acc\": 0.9663479560729847,\n  \"cm\": [\n    [\n      113339520,\n      1470326,\n      90\n    ],\n    [\n      3189313,\n      29735915,\n      471079\n    ],\n    [\n      16,\n      354576,\n      14442637\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191113191053_07310\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9131941622154113,\n  \"best_epoch\": 12,\n  \"minutes\": 12.57\n}"
+  },
+  {
+   "run": "loao_scene_20191113191053_07310_s42",
+   "source_sha256": "aef8d9faa1fe162bbfe009fbd93d7dd69a32093fb09ee6a12854ce20a0163e20",
+   "test_metrics_text": "{\n  \"miou\": 0.9172239271758228,\n  \"per_iou\": [\n    0.9600284650841792,\n    0.8444340044740205,\n    0.947209311969269\n  ],\n  \"macro_f1\": 0.9560507407005044,\n  \"pix_acc\": 0.966173585554055,\n  \"cm\": [\n    [\n      113170040,\n      1639797,\n      99\n    ],\n    [\n      3072004,\n      29929141,\n      395162\n    ],\n    [\n      23,\n      406738,\n      14390468\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191113191053_07310\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9171706823694347,\n  \"best_epoch\": 11,\n  \"minutes\": 14.99\n}"
+  },
+  {
+   "run": "loao_original_20191115195353_07620_s7",
+   "source_sha256": "b6aa8ed5ceb989fd7ca71fbef21fc9ef0090e4f640740d4e54590c969f8c796c",
+   "test_metrics_text": "{\n  \"miou\": 0.8608915306343411,\n  \"per_iou\": [\n    0.8816053291525392,\n    0.7227075880294543,\n    0.97836167472103\n  ],\n  \"macro_f1\": 0.9217257364663393,\n  \"pix_acc\": 0.9237890869140625,\n  \"cm\": [\n    [\n      87900864,\n      10044368,\n      1868\n    ],\n    [\n      1758296,\n      32538278,\n      405260\n    ],\n    [\n      63,\n      276541,\n      30914462\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191115195353_07620\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.858682711069718,\n  \"best_epoch\": 9,\n  \"minutes\": 12.51\n}"
+  },
+  {
+   "run": "loao_original_20191115195353_07620_s42",
+   "source_sha256": "87dff8af3695584fcadf3d78b2cbe4ff89f6c5d40cc54f6bf4be562dd1565e03",
+   "test_metrics_text": "{\n  \"miou\": 0.860928269889155,\n  \"per_iou\": [\n    0.8815328754622294,\n    0.7218304076551539,\n    0.9794215265500821\n  ],\n  \"macro_f1\": 0.921695373840696,\n  \"pix_acc\": 0.9238468933105469,\n  \"cm\": [\n    [\n      88013941,\n      9931241,\n      1918\n    ],\n    [\n      1894823,\n      32371750,\n      435261\n    ],\n    [\n      4,\n      213678,\n      30977384\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191115195353_07620\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8615967638089868,\n  \"best_epoch\": 9,\n  \"minutes\": 14.95\n}"
+  },
+  {
+   "run": "loao_scene_20191115195353_07620_s7",
+   "source_sha256": "dd369400b4909b5f020ea420349e5ff3a168a23f98aec5af8729c3ffa9e062ef",
+   "test_metrics_text": "{\n  \"miou\": 0.8441383561422748,\n  \"per_iou\": [\n    0.8948895974152434,\n    0.709483168183633,\n    0.9280423028279481\n  ],\n  \"macro_f1\": 0.9124212170103836,\n  \"pix_acc\": 0.9178669753069041,\n  \"cm\": [\n    [\n      93194166,\n      7091537,\n      20\n    ],\n    [\n      3854682,\n      28140807,\n      367722\n    ],\n    [\n      1,\n      209064,\n      7439111\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191115195353_07620\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.910754518704849,\n  \"best_epoch\": 12,\n  \"minutes\": 12.59\n}"
+  },
+  {
+   "run": "loao_scene_20191115195353_07620_s42",
+   "source_sha256": "deac5b97bf534bd5caaa627067152e2da3838c8232dfb16ee0f2d51e884c9f21",
+   "test_metrics_text": "{\n  \"miou\": 0.8351701236715666,\n  \"per_iou\": [\n    0.8857052871999184,\n    0.6923069739749488,\n    0.9274981098398328\n  ],\n  \"macro_f1\": 0.9066518960896266,\n  \"pix_acc\": 0.9109895706333508,\n  \"cm\": [\n    [\n      92257920,\n      8027752,\n      51\n    ],\n    [\n      3877503,\n      28097579,\n      388129\n    ],\n    [\n      0,\n      194471,\n      7453705\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191115195353_07620\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9109151451567866,\n  \"best_epoch\": 12,\n  \"minutes\": 14.98\n}"
+  },
+  {
+   "run": "loao_original_20191116192813_07770_s7",
+   "source_sha256": "e2f2b09fbd1b52b704f698f63ae3fd1413c5a549d85ac9a819f490a01d0934b7",
+   "test_metrics_text": "{\n  \"miou\": 0.8718439680154203,\n  \"per_iou\": [\n    0.9054703433616086,\n    0.7521506797701669,\n    0.9579108809144852\n  ],\n  \"macro_f1\": 0.9291463622812453,\n  \"pix_acc\": 0.9335916259765625,\n  \"cm\": [\n    [\n      93757671,\n      8691100,\n      64760\n    ],\n    [\n      1029832,\n      32814705,\n      522137\n    ],\n    [\n      2459,\n      570060,\n      26387276\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191116192813_07770\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8587652357009491,\n  \"best_epoch\": 11,\n  \"minutes\": 12.54\n}"
+  },
+  {
+   "run": "loao_original_20191116192813_07770_s42",
+   "source_sha256": "56c6d9ac2cf0741999e561530e008b34a8f40da8b9d7568f788a690014c59c83",
+   "test_metrics_text": "{\n  \"miou\": 0.8756943985468889,\n  \"per_iou\": [\n    0.9087269378659886,\n    0.7590658531712803,\n    0.9592904046033978\n  ],\n  \"macro_f1\": 0.9314787870007456,\n  \"pix_acc\": 0.9359473449707031,\n  \"cm\": [\n    [\n      94142157,\n      8292650,\n      78724\n    ],\n    [\n      1081493,\n      32805765,\n      479416\n    ],\n    [\n      2826,\n      559278,\n      26397691\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191116192813_07770\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8648315110880075,\n  \"best_epoch\": 10,\n  \"minutes\": 14.88\n}"
+  },
+  {
+   "run": "loao_scene_20191116192813_07770_s7",
+   "source_sha256": "0e30950490ba8abb985bb05be3aa8adb5cd4c338078d16258e4eb082db3a1583",
+   "test_metrics_text": "{\n  \"miou\": 0.9100722732701896,\n  \"per_iou\": [\n    0.9561597055617544,\n    0.8159021447069115,\n    0.9581549695419026\n  ],\n  \"macro_f1\": 0.9516126786833974,\n  \"pix_acc\": 0.9636850188082097,\n  \"cm\": [\n    [\n      105792603,\n      4237714,\n      33792\n    ],\n    [\n      577954,\n      25729652,\n      508490\n    ],\n    [\n      1172,\n      481408,\n      23466983\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191116192813_07770\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9088781990801534,\n  \"best_epoch\": 11,\n  \"minutes\": 12.59\n}"
+  },
+  {
+   "run": "loao_scene_20191116192813_07770_s42",
+   "source_sha256": "e9333d0f127619a347b3768f458facd7a9b3dc5318d8331e45c8b4b115f6fc6d",
+   "test_metrics_text": "{\n  \"miou\": 0.901053913431217,\n  \"per_iou\": [\n    0.9484672908510059,\n    0.7946567492447445,\n    0.9600377001979007\n  ],\n  \"macro_f1\": 0.9462481370458514,\n  \"pix_acc\": 0.9586393173184208,\n  \"cm\": [\n    [\n      105112222,\n      4916689,\n      35198\n    ],\n    [\n      758781,\n      25605069,\n      452246\n    ],\n    [\n      354,\n      488761,\n      23460448\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191116192813_07770\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9139146174660713,\n  \"best_epoch\": 12,\n  \"minutes\": 14.88\n}"
+  },
+  {
+   "run": "loao_original_20191117190234_07920_s7",
+   "source_sha256": "885cd229e165390610ebe7b36a03081b5d5b52217767c8b1dd734efacee60d87",
+   "test_metrics_text": "{\n  \"miou\": 0.8387390631014742,\n  \"per_iou\": [\n    0.8679049452514744,\n    0.7161337728455985,\n    0.9321784712073496\n  ],\n  \"macro_f1\": 0.9095901070137087,\n  \"pix_acc\": 0.9043249572753906,\n  \"cm\": [\n    [\n      98621070,\n      13774220,\n      71336\n    ],\n    [\n      1159810,\n      39353725,\n      294984\n    ],\n    [\n      4752,\n      370297,\n      10189806\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191117190234_07920\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8524723342508204,\n  \"best_epoch\": 9,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191117190234_07920_s42",
+   "source_sha256": "35563e54adc56d8a1ec0daa3e1363e4322463b36ec93aa54d8539992b1ede893",
+   "test_metrics_text": "{\n  \"miou\": 0.8416149050149199,\n  \"per_iou\": [\n    0.8711446463952506,\n    0.7201224835667617,\n    0.9335775850827476\n  ],\n  \"macro_f1\": 0.9113585217431323,\n  \"pix_acc\": 0.9066569458007813,\n  \"cm\": [\n    [\n      99213851,\n      13142686,\n      110089\n    ],\n    [\n      1419695,\n      39059275,\n      329549\n    ],\n    [\n      2746,\n      288561,\n      10273548\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191117190234_07920\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8692375542428192,\n  \"best_epoch\": 10,\n  \"minutes\": 14.95\n}"
+  },
+  {
+   "run": "loao_scene_20191117190234_07920_s7",
+   "source_sha256": "5058076ab2b51549a485bdd0d0a4495a9b4f1cc2ee6f6db2fb72cb6ffe1ece4e",
+   "test_metrics_text": "{\n  \"miou\": 0.8498469572486774,\n  \"per_iou\": [\n    0.933382109972127,\n    0.6956889071362423,\n    0.9204698546376631\n  ],\n  \"macro_f1\": 0.9148899649403693,\n  \"pix_acc\": 0.9417477716027041,\n  \"cm\": [\n    [\n      122645446,\n      7929970,\n      40438\n    ],\n    [\n      778090,\n      21457014,\n      424187\n    ],\n    [\n      5024,\n      253568,\n      8370404\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191117190234_07920\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.906197847976653,\n  \"best_epoch\": 12,\n  \"minutes\": 12.63\n}"
+  },
+  {
+   "run": "loao_scene_20191117190234_07920_s42",
+   "source_sha256": "db442b238f85208987ccded311ae6ae1a073d6d6ec2a7a79cdd7e4c61488d539",
+   "test_metrics_text": "{\n  \"miou\": 0.8507388443123572,\n  \"per_iou\": [\n    0.9301389541336554,\n    0.6912545209207308,\n    0.9308230578826857\n  ],\n  \"macro_f1\": 0.9151411191754968,\n  \"pix_acc\": 0.9397579027950866,\n  \"cm\": [\n    [\n      122080135,\n      8504024,\n      31695\n    ],\n    [\n      632006,\n      21762820,\n      264465\n    ],\n    [\n      1492,\n      319763,\n      8307741\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191117190234_07920\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9153107064872117,\n  \"best_epoch\": 11,\n  \"minutes\": 15.0\n}"
+  },
+  {
+   "run": "loao_original_20191118183654_08070_s7",
+   "source_sha256": "373f4cbc14c410ebaf85283ea5e108798eee6a6c39a4e3599f088cb41f00c1ee",
+   "test_metrics_text": "{\n  \"miou\": 0.7893291149565783,\n  \"per_iou\": [\n    0.8472456331988464,\n    0.644226061630309,\n    0.8765156500405797\n  ],\n  \"macro_f1\": 0.8783746921573309,\n  \"pix_acc\": 0.8846873779296875,\n  \"cm\": [\n    [\n      95638879,\n      11298570,\n      556983\n    ],\n    [\n      5303783,\n      33050126,\n      987036\n    ],\n    [\n      83900,\n      662548,\n      16258175\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191118183654_08070\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8608380198025752,\n  \"best_epoch\": 11,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191118183654_08070_s42",
+   "source_sha256": "7f0163470f38b5cc3621e730e59cb93f5b5bbc51575c7a5a03e52e27e7cbd87e",
+   "test_metrics_text": "{\n  \"miou\": 0.7754234942397457,\n  \"per_iou\": [\n    0.8184708778603491,\n    0.621607186369067,\n    0.886192418489821\n  ],\n  \"macro_f1\": 0.8688311115113385,\n  \"pix_acc\": 0.8671565063476563,\n  \"cm\": [\n    [\n      90923663,\n      16127246,\n      443523\n    ],\n    [\n      3559438,\n      34967302,\n      814205\n    ],\n    [\n      35804,\n      784862,\n      16183957\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191118183654_08070\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8705519791884809,\n  \"best_epoch\": 10,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_scene_20191118183654_08070_s7",
+   "source_sha256": "e7c3824eb3195bfd6ae78b071bfc84e672b21c437b0f8556bd73427ff3308b23",
+   "test_metrics_text": "{\n  \"miou\": 0.7861914015707946,\n  \"per_iou\": [\n    0.8487574800457652,\n    0.6226819875451095,\n    0.887134737121509\n  ],\n  \"macro_f1\": 0.8752857363787219,\n  \"pix_acc\": 0.8828394152727947,\n  \"cm\": [\n    [\n      97363830,\n      12385457,\n      198834\n    ],\n    [\n      4749895,\n      31125974,\n      1011387\n    ],\n    [\n      15353,\n      714238,\n      15247159\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191118183654_08070\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.903403810904296,\n  \"best_epoch\": 12,\n  \"minutes\": 12.62\n}"
+  },
+  {
+   "run": "loao_scene_20191118183654_08070_s42",
+   "source_sha256": "a4116110ff141c991fab86a1492826b281cfaf01ac05b77faab15e5aba2b599b",
+   "test_metrics_text": "{\n  \"miou\": 0.7860123734979543,\n  \"per_iou\": [\n    0.8386496732357782,\n    0.6277367825879191,\n    0.8916506646701653\n  ],\n  \"macro_f1\": 0.8754225504793657,\n  \"pix_acc\": 0.878107445890686,\n  \"cm\": [\n    [\n      94772528,\n      14967254,\n      208339\n    ],\n    [\n      3042717,\n      33087992,\n      756547\n    ],\n    [\n      15261,\n      855468,\n      15106021\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191118183654_08070\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9092483222539952,\n  \"best_epoch\": 11,\n  \"minutes\": 14.92\n}"
+  },
+  {
+   "run": "loao_original_20191119194532_08230_s7",
+   "source_sha256": "d74f6c228dcae59b9ac0b52659336e7073dcac0120f92e9903754197898c44e1",
+   "test_metrics_text": "{\n  \"miou\": 0.9000748394556807,\n  \"per_iou\": [\n    0.9250792805042511,\n    0.822046851756508,\n    0.9530983861062831\n  ],\n  \"macro_f1\": 0.9464670600310529,\n  \"pix_acc\": 0.9461754028320313,\n  \"cm\": [\n    [\n      100532013,\n      6972718,\n      56\n    ],\n    [\n      1169154,\n      40736974,\n      500388\n    ],\n    [\n      2,\n      176304,\n      13752391\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191119194532_08230\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8596316275745305,\n  \"best_epoch\": 12,\n  \"minutes\": 12.58\n}"
+  },
+  {
+   "run": "loao_original_20191119194532_08230_s42",
+   "source_sha256": "6a4064723da0e8d9ad7aae8d8789ccb8b197b6a73c1827ca7bd86c060d1d396f",
+   "test_metrics_text": "{\n  \"miou\": 0.8958385085299162,\n  \"per_iou\": [\n    0.9183464042558193,\n    0.8122365034424623,\n    0.9569326178914669\n  ],\n  \"macro_f1\": 0.9439397051473769,\n  \"pix_acc\": 0.9421580871582032,\n  \"cm\": [\n    [\n      99632733,\n      7871986,\n      68\n    ],\n    [\n      986659,\n      40994975,\n      424882\n    ],\n    [\n      4,\n      193220,\n      13735473\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191119194532_08230\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8656347503755645,\n  \"best_epoch\": 12,\n  \"minutes\": 15.01\n}"
+  },
+  {
+   "run": "loao_scene_20191119194532_08230_s7",
+   "source_sha256": "aed40b6d70be603e08376e914e32ca5d793b36f7d280c7ba641993b83048bf2f",
+   "test_metrics_text": "{\n  \"miou\": 0.8690140168395314,\n  \"per_iou\": [\n    0.9229227475250499,\n    0.8050838382119744,\n    0.8790354647815698\n  ],\n  \"macro_f1\": 0.9291863238307411,\n  \"pix_acc\": 0.9403951747971435,\n  \"cm\": [\n    [\n      102772596,\n      7038251,\n      0\n    ],\n    [\n      1544731,\n      38099984,\n      455741\n    ],\n    [\n      0,\n      185537,\n      4660094\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191119194532_08230\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9095274768516339,\n  \"best_epoch\": 12,\n  \"minutes\": 12.75\n}"
+  },
+  {
+   "run": "loao_scene_20191119194532_08230_s42",
+   "source_sha256": "e55c2824a0575e1d15050ef36c930535077cf2129fec55e64564dc3acf3394fa",
+   "test_metrics_text": "{\n  \"miou\": 0.8602530737437775,\n  \"per_iou\": [\n    0.9078830982068166,\n    0.7792511849831166,\n    0.893624938041399\n  ],\n  \"macro_f1\": 0.923824667288359,\n  \"pix_acc\": 0.9301253150957359,\n  \"cm\": [\n    [\n      101121404,\n      8689437,\n      6\n    ],\n    [\n      1570678,\n      38172344,\n      357434\n    ],\n    [\n      0,\n      196037,\n      4649594\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191119194532_08230\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9145364186593707,\n  \"best_epoch\": 11,\n  \"minutes\": 14.97\n}"
+  },
+  {
+   "run": "loao_original_20191120191952_08380_s7",
+   "source_sha256": "978c8e86f4a0c34494bfcd2782420a671701e17bd94fbf434b02eafb79279dc4",
+   "test_metrics_text": "{\n  \"miou\": 0.8996489621521144,\n  \"per_iou\": [\n    0.9129651432085175,\n    0.7957119556407937,\n    0.9902697876070321\n  ],\n  \"macro_f1\": 0.9452831265627625,\n  \"pix_acc\": 0.9552384582519531,\n  \"cm\": [\n    [\n      71066316,\n      6398832,\n      9\n    ],\n    [\n      376058,\n      28565207,\n      345749\n    ],\n    [\n      0,\n      213083,\n      56874746\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191120191952_08380\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8571759564932026,\n  \"best_epoch\": 12,\n  \"minutes\": 12.56\n}"
+  },
+  {
+   "run": "loao_original_20191120191952_08380_s42",
+   "source_sha256": "e34107f23188f6d7b91ec4e2049f76fbffb6a891c660837d98d4eb7caa7f9ad4",
+   "test_metrics_text": "{\n  \"miou\": 0.901360824082387,\n  \"per_iou\": [\n    0.9167353307476845,\n    0.7985369561665673,\n    0.9888101853329093\n  ],\n  \"macro_f1\": 0.9463059248146495,\n  \"pix_acc\": 0.956407421875,\n  \"cm\": [\n    [\n      71554777,\n      5910299,\n      81\n    ],\n    [\n      588752,\n      28309170,\n      389092\n    ],\n    [\n      1,\n      253983,\n      56833845\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191120191952_08380\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8640921080977142,\n  \"best_epoch\": 7,\n  \"minutes\": 14.87\n}"
+  },
+  {
+   "run": "loao_scene_20191120191952_08380_s7",
+   "source_sha256": "7e6a1878113250f190a959d8c61893d9386861b28b013092bf2dacad43d9ecd0",
+   "test_metrics_text": "{\n  \"miou\": 0.9376922565826814,\n  \"per_iou\": [\n    0.9598316985915177,\n    0.86338039573984,\n    0.9898646754166863\n  ],\n  \"macro_f1\": 0.9670308613179482,\n  \"pix_acc\": 0.9756006831743698,\n  \"cm\": [\n    [\n      79046355,\n      3083282,\n      3\n    ],\n    [\n      224751,\n      24096731,\n      301049\n    ],\n    [\n      0,\n      203937,\n      49319661\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191120191952_08380\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9068638000069699,\n  \"best_epoch\": 12,\n  \"minutes\": 12.59\n}"
+  },
+  {
+   "run": "loao_scene_20191120191952_08380_s42",
+   "source_sha256": "b3de3b656b009b40100b5cb311b4c371f18d17f0dce4273e10ddaf604b392160",
+   "test_metrics_text": "{\n  \"miou\": 0.9438810091826791,\n  \"per_iou\": [\n    0.9648022693846409,\n    0.8767081112662602,\n    0.9901326468971362\n  ],\n  \"macro_f1\": 0.9704773007625297,\n  \"pix_acc\": 0.978308377417103,\n  \"cm\": [\n    [\n      79441678,\n      2687960,\n      2\n    ],\n    [\n      210214,\n      24104823,\n      307494\n    ],\n    [\n      0,\n      184205,\n      49339393\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191120191952_08380\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9131436947559456,\n  \"best_epoch\": 11,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_original_20191121185413_08530_s7",
+   "source_sha256": "f7217edbcb2593410022af03b778369367b3d05f83df9712e1e267fdcd3a3810",
+   "test_metrics_text": "{\n  \"miou\": 0.9033170690323273,\n  \"per_iou\": [\n    0.9210966487799852,\n    0.820845390045077,\n    0.9680091682719197\n  ],\n  \"macro_f1\": 0.9480938797460311,\n  \"pix_acc\": 0.947657177734375,\n  \"cm\": [\n    [\n      90182085,\n      7116341,\n      1779\n    ],\n    [\n      606918,\n      39283614,\n      525337\n    ],\n    [\n      176,\n      325297,\n      25798453\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191121185413_08530\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8591943827746054,\n  \"best_epoch\": 11,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191121185413_08530_s42",
+   "source_sha256": "56c4867315c544e946a6ca951dbfb6613af06dc1876736a5c4b877ecffc18f1a",
+   "test_metrics_text": "{\n  \"miou\": 0.9077067934163036,\n  \"per_iou\": [\n    0.9253829524469358,\n    0.8285588911149333,\n    0.9691785366870418\n  ],\n  \"macro_f1\": 0.9506120560911882,\n  \"pix_acc\": 0.9503967712402344,\n  \"cm\": [\n    [\n      90628774,\n      6669749,\n      1682\n    ],\n    [\n      636268,\n      39268706,\n      510895\n    ],\n    [\n      34,\n      308365,\n      25815527\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191121185413_08530\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8643235045264218,\n  \"best_epoch\": 10,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_scene_20191121185413_08530_s7",
+   "source_sha256": "cab50aae81e149c12f6741b591fc934be11fd9f1ec275f7d5c9c2a7b9c5fbc60",
+   "test_metrics_text": "{\n  \"miou\": 0.9203713696921909,\n  \"per_iou\": [\n    0.9558853957057767,\n    0.8558020858745063,\n    0.9494266274962899\n  ],\n  \"macro_f1\": 0.9579337938560455,\n  \"pix_acc\": 0.9645145651950061,\n  \"cm\": [\n    [\n      100407978,\n      3548032,\n      70\n    ],\n    [\n      1085768,\n      32204055,\n      470171\n    ],\n    [\n      10,\n      322234,\n      14877520\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191121185413_08530\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.901984012325496,\n  \"best_epoch\": 12,\n  \"minutes\": 12.54\n}"
+  },
+  {
+   "run": "loao_scene_20191121185413_08530_s42",
+   "source_sha256": "933fde85062a28ca4a787e6bd60a8dad88c044c02f1289920f918d72d5a6b49e",
+   "test_metrics_text": "{\n  \"miou\": 0.9270730186525222,\n  \"per_iou\": [\n    0.9602153903383689,\n    0.8677396987175013,\n    0.9532639669016962\n  ],\n  \"macro_f1\": 0.961654595628101,\n  \"pix_acc\": 0.9678881268008354,\n  \"cm\": [\n    [\n      100906848,\n      3049185,\n      47\n    ],\n    [\n      1131556,\n      32215606,\n      412832\n    ],\n    [\n      86,\n      316708,\n      14882970\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191121185413_08530\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9112427972705252,\n  \"best_epoch\": 11,\n  \"minutes\": 14.98\n}"
+  },
+  {
+   "run": "loao_original_20191122182834_08680_s7",
+   "source_sha256": "191b0fc4a188225bee692ff6541d62d52ffcf467f6076507cd5629515e13f908",
+   "test_metrics_text": "{\n  \"miou\": 0.8883701947849989,\n  \"per_iou\": [\n    0.9472087082792969,\n    0.7534944801642748,\n    0.9644073959114252\n  ],\n  \"macro_f1\": 0.93806346823759,\n  \"pix_acc\": 0.9562042644308122,\n  \"cm\": [\n    [\n      105919511,\n      4825168,\n      197\n    ],\n    [\n      1077903,\n      19851280,\n      291461\n    ],\n    [\n      1,\n      299809,\n      16026254\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191122182834_08680\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8672818392894873,\n  \"best_epoch\": 11,\n  \"minutes\": 12.65\n}"
+  },
+  {
+   "run": "loao_original_20191122182834_08680_s42",
+   "source_sha256": "e306b7c6290119a74666d1cf75fd54ba9bb069cdd1dbe8c7965c4fb6b708a715",
+   "test_metrics_text": "{\n  \"miou\": 0.8914166666679586,\n  \"per_iou\": [\n    0.9483942859466147,\n    0.7598029163660764,\n    0.9660527976911844\n  ],\n  \"macro_f1\": 0.9399187141915366,\n  \"pix_acc\": 0.957337491249672,\n  \"cm\": [\n    [\n      105901822,\n      4842985,\n      69\n    ],\n    [\n      919464,\n      20012041,\n      289139\n    ],\n    [\n      0,\n      274834,\n      16051230\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191122182834_08680\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8634332384321483,\n  \"best_epoch\": 10,\n  \"minutes\": 14.94\n}"
+  },
+  {
+   "run": "loao_scene_20191122182834_08680_s7",
+   "source_sha256": "4269368569bdda5a1eb37d1bf56bf6a0a52335c668edc752589baa0d91b6eb89",
+   "test_metrics_text": "{\n  \"miou\": 0.8687702357450862,\n  \"per_iou\": [\n    0.9599377220893699,\n    0.6945354376069109,\n    0.9518375475389773\n  ],\n  \"macro_f1\": 0.9248731613614657,\n  \"pix_acc\": 0.9627014011008403,\n  \"cm\": [\n    [\n      114764189,\n      4327494,\n      0\n    ],\n    [\n      462103,\n      12114151,\n      297583\n    ],\n    [\n      0,\n      240761,\n      10639326\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191122182834_08680\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.90805349737189,\n  \"best_epoch\": 12,\n  \"minutes\": 12.66\n}"
+  },
+  {
+   "run": "loao_scene_20191122182834_08680_s42",
+   "source_sha256": "cdd0ab1f2141ec61562f1000437667c640886410ad264671f33b2bfefc184462",
+   "test_metrics_text": "{\n  \"miou\": 0.8757901847786798,\n  \"per_iou\": [\n    0.963303975320368,\n    0.7101935932527275,\n    0.9538729857629438\n  ],\n  \"macro_f1\": 0.9294142698557682,\n  \"pix_acc\": 0.9656563957196107,\n  \"cm\": [\n    [\n      115284381,\n      3807302,\n      0\n    ],\n    [\n      584332,\n      12022133,\n      267372\n    ],\n    [\n      0,\n      246827,\n      10633260\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191122182834_08680\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9125646454822824,\n  \"best_epoch\": 12,\n  \"minutes\": 14.98\n}"
+  },
+  {
+   "run": "loao_original_20191123180255_08830_s7",
+   "source_sha256": "01e1231e54b64077f1318721f71bfad550c4cc79b9030d7f78cc24299c03d106",
+   "test_metrics_text": "{\n  \"miou\": 0.8485860546967098,\n  \"per_iou\": [\n    0.8484128759396378,\n    0.7409185363122747,\n    0.9564267518382166\n  ],\n  \"macro_f1\": 0.9156333243179748,\n  \"pix_acc\": 0.9158650268554688,\n  \"cm\": [\n    [\n      67005533,\n      9715748,\n      185897\n    ],\n    [\n      2055074,\n      38846021,\n      932947\n    ],\n    [\n      15254,\n      879754,\n      44203772\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191123180255_08830\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8648484865424345,\n  \"best_epoch\": 12,\n  \"minutes\": 12.52\n}"
+  },
+  {
+   "run": "loao_original_20191123180255_08830_s42",
+   "source_sha256": "0503e9192e9827c661642331f58698a4fe88db2ba36224ab961fc70b11a54f21",
+   "test_metrics_text": "{\n  \"miou\": 0.8485008718133372,\n  \"per_iou\": [\n    0.8456366108776058,\n    0.7429087748774618,\n    0.9569572296849441\n  ],\n  \"macro_f1\": 0.9156204445995453,\n  \"pix_acc\": 0.9153784118652344,\n  \"cm\": [\n    [\n      66219913,\n      10474562,\n      212703\n    ],\n    [\n      1396434,\n      39436900,\n      1000708\n    ],\n    [\n      4153,\n      775841,\n      44318786\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191123180255_08830\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8691111084068375,\n  \"best_epoch\": 9,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_scene_20191123180255_08830_s7",
+   "source_sha256": "93725d8efc44744934c809f151ce380d55ea794549404d8d08e1161b24262170",
+   "test_metrics_text": "{\n  \"miou\": 0.869107201830286,\n  \"per_iou\": [\n    0.896738329118656,\n    0.7572708827617618,\n    0.95331239361044\n  ],\n  \"macro_f1\": 0.9278426915430588,\n  \"pix_acc\": 0.9337714274234342,\n  \"cm\": [\n    [\n      76359090,\n      6004925,\n      144354\n    ],\n    [\n      2603049,\n      32468083,\n      1161719\n    ],\n    [\n      40613,\n      637348,\n      40511912\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191123180255_08830\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9139161177714114,\n  \"best_epoch\": 11,\n  \"minutes\": 12.59\n}"
+  },
+  {
+   "run": "loao_scene_20191123180255_08830_s42",
+   "source_sha256": "cc8d8610e9c200b5ae475c032edd8aeb2818a0680061ca145d847aa1971d5a1b",
+   "test_metrics_text": "{\n  \"miou\": 0.8638458365606158,\n  \"per_iou\": [\n    0.889504134622455,\n    0.749446940122549,\n    0.9525864349368431\n  ],\n  \"macro_f1\": 0.9246734521471388,\n  \"pix_acc\": 0.9302263944385099,\n  \"cm\": [\n    [\n      75786326,\n      6527169,\n      194874\n    ],\n    [\n      2620736,\n      32581490,\n      1030625\n    ],\n    [\n      71540,\n      714025,\n      40404308\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191123180255_08830\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9146778014458538,\n  \"best_epoch\": 12,\n  \"minutes\": 14.94\n}"
+  },
+  {
+   "run": "loao_original_20191124191133_08990_s7",
+   "source_sha256": "705c801f269654963c653f9384c41c5463137fa1c948d39037ffb5ade57689ec",
+   "test_metrics_text": "{\n  \"miou\": 0.7460611612139488,\n  \"per_iou\": [\n    0.5226459757657765,\n    0.7400245923536615,\n    0.9755129155224084\n  ],\n  \"macro_f1\": 0.8415642302293035,\n  \"pix_acc\": 0.8863995056152344,\n  \"cm\": [\n    [\n      18488350,\n      15936151,\n      130889\n    ],\n    [\n      815026,\n      52595998,\n      746295\n    ],\n    [\n      4103,\n      979841,\n      74143347\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191124191133_08990\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.866096781673178,\n  \"best_epoch\": 12,\n  \"minutes\": 12.51\n}"
+  },
+  {
+   "run": "loao_original_20191124191133_08990_s42",
+   "source_sha256": "3dcc28460538b72b8b45e8ce7be7f73e19c9bf39a8f3c9c1624e511a2f109f23",
+   "test_metrics_text": "{\n  \"miou\": 0.7570150958880211,\n  \"per_iou\": [\n    0.5519397470240646,\n    0.7424555794748704,\n    0.9766499611651283\n  ],\n  \"macro_f1\": 0.8505572650757974,\n  \"pix_acc\": 0.8901868896484375,\n  \"cm\": [\n    [\n      20158757,\n      14254107,\n      142526\n    ],\n    [\n      1962499,\n      51440181,\n      754639\n    ],\n    [\n      5585,\n      872424,\n      74249282\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191124191133_08990\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.873925764104793,\n  \"best_epoch\": 9,\n  \"minutes\": 14.96\n}"
+  },
+  {
+   "run": "loao_scene_20191124191133_08990_s7",
+   "source_sha256": "733d77919a5b13b0829b41e43cb123b678160c229a10ddf9702be56bc8cd9296",
+   "test_metrics_text": "{\n  \"miou\": 0.9281558433290457,\n  \"per_iou\": [\n    0.9535852818495382,\n    0.864122176418964,\n    0.9667600717186347\n  ],\n  \"macro_f1\": 0.9621497857331356,\n  \"pix_acc\": 0.9686455973751907,\n  \"cm\": [\n    [\n      55739088,\n      1552444,\n      70138\n    ],\n    [\n      1087386,\n      29588105,\n      675548\n    ],\n    [\n      3071,\n      1337167,\n      60667641\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191124191133_08990\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9112474567796277,\n  \"best_epoch\": 11,\n  \"minutes\": 12.63\n}"
+  },
+  {
+   "run": "loao_scene_20191124191133_08990_s42",
+   "source_sha256": "53ae9a53b656cd38e50f2d3dd77395795a224a26f5195090b19dca5e3e5ce5c0",
+   "test_metrics_text": "{\n  \"miou\": 0.9288214663830677,\n  \"per_iou\": [\n    0.9485630303479194,\n    0.865325936399461,\n    0.9725754324018225\n  ],\n  \"macro_f1\": 0.9625003377996988,\n  \"pix_acc\": 0.969088290711817,\n  \"cm\": [\n    [\n      55607233,\n      1680272,\n      74165\n    ],\n    [\n      1258363,\n      29442792,\n      649884\n    ],\n    [\n      2569,\n      993778,\n      61011532\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191124191133_08990\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9191224314259413,\n  \"best_epoch\": 12,\n  \"minutes\": 15.02\n}"
+  },
+  {
+   "run": "loao_original_20191126182014_09290_s7",
+   "source_sha256": "2f93fe00625c40b3d0098a8c1d8bc2f4f9fdbaa88fcc04029a20661955d20c43",
+   "test_metrics_text": "{\n  \"miou\": 0.9017615766196548,\n  \"per_iou\": [\n    0.9304105353548358,\n    0.8063088640770137,\n    0.968565330427115\n  ],\n  \"macro_f1\": 0.9469174280644138,\n  \"pix_acc\": 0.9535365234375,\n  \"cm\": [\n    [\n      84356877,\n      5551974,\n      946\n    ],\n    [\n      756410,\n      31685771,\n      787266\n    ],\n    [\n      89,\n      515891,\n      40184776\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191126182014_09290\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8598391897409662,\n  \"best_epoch\": 12,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_original_20191126182014_09290_s42",
+   "source_sha256": "034a8b7825b48c1d0f20e22c1973b74c1c67873bbbb680c181e5770164e59b02",
+   "test_metrics_text": "{\n  \"miou\": 0.9026178183499209,\n  \"per_iou\": [\n    0.9295465908344182,\n    0.8074160499361555,\n    0.9708908142791892\n  ],\n  \"macro_f1\": 0.9473884738215013,\n  \"pix_acc\": 0.953678515625,\n  \"cm\": [\n    [\n      84252203,\n      5656378,\n      1216\n    ],\n    [\n      728100,\n      31813154,\n      688193\n    ],\n    [\n      59,\n      515366,\n      40185331\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191126182014_09290\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8646947592634612,\n  \"best_epoch\": 12,\n  \"minutes\": 14.93\n}"
+  },
+  {
+   "run": "loao_scene_20191126182014_09290_s7",
+   "source_sha256": "0d196c87e36e396dab8b6a0e36bc4ff587f40454928a375ebb0fe0daf200837f",
+   "test_metrics_text": "{\n  \"miou\": 0.9219928596142607,\n  \"per_iou\": [\n    0.963042080176618,\n    0.8384639970508795,\n    0.9644725016152844\n  ],\n  \"macro_f1\": 0.9584078261971927,\n  \"pix_acc\": 0.9692440184468832,\n  \"cm\": [\n    [\n      94083667,\n      2601806,\n      3\n    ],\n    [\n      1008761,\n      24782721,\n      662286\n    ],\n    [\n      6,\n      501713,\n      31599571\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191126182014_09290\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9086758504772502,\n  \"best_epoch\": 11,\n  \"minutes\": 12.53\n}"
+  },
+  {
+   "run": "loao_scene_20191126182014_09290_s42",
+   "source_sha256": "29440ea00d1cb05fc59d07a7f0319fd2bbcbcf9aa3201f96ea295b304a0fbf48",
+   "test_metrics_text": "{\n  \"miou\": 0.9246757459817699,\n  \"per_iou\": [\n    0.9642717428822677,\n    0.8434216867502726,\n    0.9663338083127695\n  ],\n  \"macro_f1\": 0.9599168945182198,\n  \"pix_acc\": 0.9704026140492406,\n  \"cm\": [\n    [\n      94268085,\n      2417390,\n      1\n    ],\n    [\n      1075435,\n      24749786,\n      628547\n    ],\n    [\n      1,\n      473340,\n      31627949\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191126182014_09290\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.909114950031896,\n  \"best_epoch\": 12,\n  \"minutes\": 15.06\n}"
+  },
+  {
+   "run": "loao_original_20191127175434_09440_s7",
+   "source_sha256": "e6d7b6452d63d7cd5569914602410e9db50b731548d465e6b9c7ee5352a3dd21",
+   "test_metrics_text": "{\n  \"miou\": 0.7197654589322022,\n  \"per_iou\": [\n    0.6733543103581263,\n    0.5430678675524875,\n    0.9428741988859927\n  ],\n  \"macro_f1\": 0.8264246202165838,\n  \"pix_acc\": 0.8186120727539062,\n  \"cm\": [\n    [\n      57747840,\n      24311019,\n      806533\n    ],\n    [\n      2859621,\n      34318942,\n      503333\n    ],\n    [\n      36434,\n      1201658,\n      42054620\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191127175434_09440\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8643343644064384,\n  \"best_epoch\": 12,\n  \"minutes\": 12.56\n}"
+  },
+  {
+   "run": "loao_original_20191127175434_09440_s42",
+   "source_sha256": "aee34b25214fc5e4e0b23aa40e6996f6c6db40b12da20a94fc1d14a1f0de7142",
+   "test_metrics_text": "{\n  \"miou\": 0.7122101488448412,\n  \"per_iou\": [\n    0.677668801687401,\n    0.5253305342488338,\n    0.9336311105982891\n  ],\n  \"macro_f1\": 0.8207849737463188,\n  \"pix_acc\": 0.8146265075683594,\n  \"cm\": [\n    [\n      59388074,\n      22941113,\n      536205\n    ],\n    [\n      4489506,\n      32708768,\n      483622\n    ],\n    [\n      280941,\n      1640206,\n      41371565\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"original\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191127175434_09440\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.8742465006183627,\n  \"best_epoch\": 9,\n  \"minutes\": 14.89\n}"
+  },
+  {
+   "run": "loao_scene_20191127175434_09440_s7",
+   "source_sha256": "f8637640dbd27e86b357f4f2b7c455d221ae21bf17ca3ab739e5c4948ad75b53",
+   "test_metrics_text": "{\n  \"miou\": 0.8452111747828903,\n  \"per_iou\": [\n    0.9257273499930471,\n    0.6674696859755166,\n    0.9424364883801072\n  ],\n  \"macro_f1\": 0.9107915264129844,\n  \"pix_acc\": 0.9413147462174674,\n  \"cm\": [\n    [\n      94244257,\n      5492780,\n      442387\n    ],\n    [\n      1576760,\n      18307181,\n      483923\n    ],\n    [\n      49447,\n      1567090,\n      41631786\n    ]\n  ],\n  \"photon\": \"true\",\n  \"seed\": 7,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191127175434_09440\",\n  \"disjoint_tiles\": false,\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9033867662660309,\n  \"best_epoch\": 11,\n  \"minutes\": 12.55\n}"
+  },
+  {
+   "run": "loao_scene_20191127175434_09440_s42",
+   "source_sha256": "58a569e81a787ec8fd482359e87f7a2a7b4da9d687db279d5a669b6d88ca6745",
+   "test_metrics_text": "{\n  \"miou\": 0.8514872019419091,\n  \"per_iou\": [\n    0.9312947407214869,\n    0.6829400417363766,\n    0.9402268233678637\n  ],\n  \"macro_f1\": 0.9150738348025658,\n  \"pix_acc\": 0.94433241559812,\n  \"cm\": [\n    [\n      94660504,\n      5112778,\n      406142\n    ],\n    [\n      1369866,\n      18561415,\n      436583\n    ],\n    [\n      94690,\n      1698047,\n      41455586\n    ]\n  ],\n  \"photon\": \"none\",\n  \"seed\": 42,\n  \"labels\": \"scene\",\n  \"split_col\": \"split\",\n  \"holdout_acq\": \"20191127175434_09440\",\n  \"n_train_acq\": null,\n  \"fusion\": \"deep\",\n  \"encoder\": \"resnet18\",\n  \"loss\": \"focal\",\n  \"best_val_miou\": 0.9149251391127647,\n  \"best_epoch\": 9,\n  \"minutes\": 14.99\n}"
+  }
+ ]
+}

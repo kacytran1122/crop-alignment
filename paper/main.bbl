@@ -1,0 +1,296 @@
+\begin{thebibliography}{39}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alsallakh et~al.(2021)Alsallakh, Kokhlikyan, Miglani, Yuan, and
+  Reblitz-Richardson]{alsallakh2021mind}
+Bilal Alsallakh, Narine Kokhlikyan, Vivek Miglani, Jun Yuan, and Orion
+  Reblitz-Richardson.
+\newblock Mind the pad -- {CNN}s can develop blind spots.
+\newblock In \emph{ICLR}, 2021.
+
+\bibitem[Aybar et~al.(2022)Aybar, Ysuhuaylas, Loja,
+  et~al.]{aybar2022cloudsen12}
+Cesar Aybar, Luis Ysuhuaylas, Jhomira Loja, et~al.
+\newblock {CloudSEN12}, a global dataset for semantic understanding of cloud
+  and cloud shadow in {Sentinel-2}.
+\newblock \emph{Scientific Data}, 9\penalty0 (1):\penalty0 782, 2022.
+
+\bibitem[Aybar et~al.(2024)Aybar, Bautista, Montero, Contreras,
+  et~al.]{aybar2024cloudsen12plus}
+Cesar Aybar, Lesly Bautista, David Montero, Julio Contreras, et~al.
+\newblock {CloudSEN12+}: The largest dataset of expert-labeled pixels for cloud
+  and cloud shadow detection in {Sentinel-2}.
+\newblock \emph{Data in Brief}, 56:\penalty0 110852, 2024.
+
+\bibitem[Beery et~al.(2018)Beery, Van~Horn, and Perona]{beery2018terra}
+Sara Beery, Grant Van~Horn, and Pietro Perona.
+\newblock Recognition in terra incognita.
+\newblock In \emph{ECCV}, 2018.
+
+\bibitem[Bonafilia et~al.(2020)Bonafilia, Tellman, Anderson, and
+  Issenberg]{bonafilia2020sen1floods11}
+Derrick Bonafilia, Beth Tellman, Tyler Anderson, and Erica Issenberg.
+\newblock Sen1floods11: A georeferenced dataset to train and test deep learning
+  flood algorithms for sentinel-1.
+\newblock In \emph{CVPR Workshops}, 2020.
+
+\bibitem[Bouthillier et~al.(2021)Bouthillier, Delaunay, Bronzi, Trofimov,
+  Nichyporuk, Szeto, Sepah, Raff, Madan, Voleti,
+  et~al.]{bouthillier2021accounting}
+Xavier Bouthillier, Pierre Delaunay, Mirko Bronzi, Assya Trofimov, Brennan
+  Nichyporuk, Justin Szeto, Naz Sepah, Edward Raff, Kanika Madan, Vikram
+  Voleti, et~al.
+\newblock Accounting for variance in machine learning benchmarks.
+\newblock In \emph{Proceedings of Machine Learning and Systems}, 2021.
+
+\bibitem[Card et~al.(2020)Card, Henderson, Khandelwal, Jia, Mahowald, and
+  Jurafsky]{card2020little}
+Dallas Card, Peter Henderson, Urvashi Khandelwal, Robin Jia, Kyle Mahowald, and
+  Dan Jurafsky.
+\newblock With little power comes great responsibility.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 9263--9274, 2020.
+
+\bibitem[Carrara et~al.(2026)Carrara, Kukde, Croft, Deschamps, and
+  Jug]{carrara2026switi}
+Federico Carrara, Aman Kukde, Melisande Croft, Joran Deschamps, and Florian
+  Jug.
+\newblock {SWITi}: Quantifying and reducing tiling artifacts with sliding
+  window inner tiling.
+\newblock \emph{arXiv preprint arXiv:2607.18990}, 2026.
+
+\bibitem[D'Amour et~al.(2022)D'Amour, Heller, Moldovan, Adlam, Alipanahi,
+  Beutel, Chen, Deaton, Eisenstein, Hoffman,
+  et~al.]{damour2022underspecification}
+Alexander D'Amour, Katherine Heller, Dan Moldovan, Ben Adlam, Babak Alipanahi,
+  Alex Beutel, Christina Chen, Jonathan Deaton, Jacob Eisenstein, Matthew~D
+  Hoffman, et~al.
+\newblock Underspecification presents challenges for credibility in modern
+  machine learning.
+\newblock \emph{Journal of Machine Learning Research}, 23\penalty0
+  (226):\penalty0 1--61, 2022.
+
+\bibitem[Dang et~al.(2024)Dang, Li, Zhang, and Ma]{dang2023crosswindow}
+Bo Dang, Yansheng Li, Yongjun Zhang, and Jiayi Ma.
+\newblock Progressive learning with cross-window consistency for
+  semi-supervised semantic segmentation.
+\newblock \emph{IEEE Transactions on Image Processing}, 33:\penalty0
+  5219--5231, 2024.
+
+\bibitem[Feng et~al.(2019)Feng, Wallace, and Boyd-Graber]{feng2019misleading}
+Shi Feng, Eric Wallace, and Jordan Boyd-Graber.
+\newblock Misleading failures of partial-input baselines.
+\newblock In \emph{ACL}, 2019.
+
+\bibitem[Geirhos et~al.(2020)Geirhos, Jacobsen, Michaelis, Zemel, Brendel,
+  Bethge, and Wichmann]{geirhos2020shortcut}
+Robert Geirhos, J{\"o}rn-Henrik Jacobsen, Claudio Michaelis, Richard Zemel,
+  Wieland Brendel, Matthias Bethge, and Felix~A Wichmann.
+\newblock Shortcut learning in deep neural networks.
+\newblock \emph{Nature Machine Intelligence}, 2\penalty0 (11):\penalty0
+  665--673, 2020.
+
+\bibitem[Goyal et~al.(2017)Goyal, Khot, Summers-Stay, Batra, and
+  Parikh]{goyal2017making}
+Yash Goyal, Tejas Khot, Douglas Summers-Stay, Dhruv Batra, and Devi Parikh.
+\newblock Making the {V} in {VQA} matter: Elevating the role of image
+  understanding in visual question answering.
+\newblock In \emph{CVPR}, 2017.
+
+\bibitem[Gururangan et~al.(2018)Gururangan, Swayamdipta, Levy, Schwartz,
+  Bowman, and Smith]{gururangan2018annotation}
+Suchin Gururangan, Swabha Swayamdipta, Omer Levy, Roy Schwartz, Samuel~R
+  Bowman, and Noah~A Smith.
+\newblock Annotation artifacts in natural language inference data.
+\newblock In \emph{NAACL-HLT}, 2018.
+
+\bibitem[Huang et~al.(2019)Huang, Reichman, Collins, Bradbury, and
+  Malof]{huang2019tiling}
+Bohao Huang, Daniel Reichman, Leslie~M. Collins, Kyle Bradbury, and Jordan~M.
+  Malof.
+\newblock Tiling and stitching segmentation output for remote sensing: Basic
+  challenges and recommendations.
+\newblock \emph{arXiv preprint arXiv:1805.12219}, 2019.
+
+\bibitem[Hurlbert(1984)]{hurlbert1984pseudoreplication}
+Stuart~H Hurlbert.
+\newblock Pseudoreplication and the design of ecological field experiments.
+\newblock \emph{Ecological Monographs}, 54\penalty0 (2):\penalty0 187--211,
+  1984.
+
+\bibitem[Iqrah et~al.(2023)Iqrah, Koo, Wang, Xie, and Prasad]{iqrah2023polar}
+Jurdana~Masuma Iqrah, Younghyun Koo, Wei Wang, Hongjie Xie, and Sushil Prasad.
+\newblock Toward polar sea-ice classification using color-based segmentation
+  and auto-labeling of {Sentinel-2} imagery to train an efficient deep learning
+  model.
+\newblock In \emph{2nd Annual AAAI Workshop on AI to Accelerate Science and
+  Engineering (AI2ASE)}, 2023.
+
+\bibitem[Iqrah et~al.(2024)Iqrah, Wang, Xie, and Prasad]{iqrah2024parallel}
+Jurdana~Masuma Iqrah, Wei Wang, Hongjie Xie, and Sushil~K Prasad.
+\newblock A parallel workflow for polar sea-ice classification using
+  auto-labeling of {Sentinel-2} imagery.
+\newblock In \emph{IEEE International Parallel and Distributed Processing
+  Symposium Workshops (IPDPSW)}, pages 1016--1025, 2024.
+
+\bibitem[Islam et~al.(2020)Islam, Jia, and Bruce]{islam2020position}
+Md~Amirul Islam, Sen Jia, and Neil D~B Bruce.
+\newblock How much position information do convolutional neural networks
+  encode?
+\newblock In \emph{ICLR}, 2020.
+
+\bibitem[Jabri et~al.(2016)Jabri, Joulin, and van~der
+  Maaten]{jabri2016revisiting}
+Allan Jabri, Armand Joulin, and Laurens van~der Maaten.
+\newblock Revisiting visual question answering baselines.
+\newblock In \emph{ECCV}, 2016.
+
+\bibitem[Kapoor and Narayanan(2023)]{kapoor2023leakage}
+Sayash Kapoor and Arvind Narayanan.
+\newblock Leakage and the reproducibility crisis in machine-learning-based
+  science.
+\newblock \emph{Patterns}, 4\penalty0 (9), 2023.
+
+\bibitem[Karasiak et~al.(2022)Karasiak, Dejoux, Monteil, and
+  Sheeren]{karasiak2022spatial}
+Nicolas Karasiak, Jean-Fran{\c{c}}ois Dejoux, Claude Monteil, and David
+  Sheeren.
+\newblock Spatial dependence between training and test sets: Another pitfall of
+  classification accuracy assessment in remote sensing.
+\newblock \emph{Machine Learning}, 111\penalty0 (7):\penalty0 2715--2740, 2022.
+
+\bibitem[Kattenborn et~al.(2022)Kattenborn, Schiefer, Frey, Feilhauer, Mahecha,
+  and Dormann]{kattenborn2022spatially}
+Teja Kattenborn, Felix Schiefer, Julian Frey, Hannes Feilhauer, Miguel~D
+  Mahecha, and Carsten~F Dormann.
+\newblock Spatially autocorrelated training and validation samples inflate
+  performance assessment of convolutional neural networks.
+\newblock \emph{ISPRS Open Journal of Photogrammetry and Remote Sensing}, 5,
+  2022.
+
+\bibitem[Kayhan and van Gemert(2020)]{kayhan2020translation}
+Osman~Semih Kayhan and Jan~C van Gemert.
+\newblock On translation invariance in {CNN}s: Convolutional layers can exploit
+  absolute spatial location.
+\newblock In \emph{CVPR}, 2020.
+
+\bibitem[Lapuschkin et~al.(2019)Lapuschkin, W{\"a}ldchen, Binder, Montavon,
+  Samek, and M{\"u}ller]{lapuschkin2019unmasking}
+Sebastian Lapuschkin, Stephan W{\"a}ldchen, Alexander Binder, Gr{\'e}goire
+  Montavon, Wojciech Samek, and Klaus-Robert M{\"u}ller.
+\newblock Unmasking clever hans predictors and assessing what machines really
+  learn.
+\newblock \emph{Nature Communications}, 10\penalty0 (1):\penalty0 1096, 2019.
+
+\bibitem[Lechamo et~al.(2025)Lechamo, Iqrah, Vatsavai, and
+  Prasad]{lechamo2025multimodal}
+Nathan~Getachew Lechamo, Jurdana~Masuma Iqrah, Ranga~Raju Vatsavai, and Sushil
+  Prasad.
+\newblock Toward a multimodal fusion framework for polar sea ice classification
+  using image and point cloud satellite datasets.
+\newblock In \emph{Proceedings of the 1st ACM SIGSPATIAL International Workshop
+  on Polar Data Science (PoIDS '25)}, pages 1--8, 2025.
+
+\bibitem[Neumann et~al.(2019)Neumann, Martino, Markus, Bae, Bock, Brenner,
+  Brunt, Cavanaugh, Fernandes, Hancock, et~al.]{neumann2019atlas}
+Thomas~A Neumann, Anthony~J Martino, Thorsten Markus, Sungkoo Bae, Michael~R
+  Bock, Anita~C Brenner, Kelly~M Brunt, John Cavanaugh, Stanley~T Fernandes,
+  David~W Hancock, et~al.
+\newblock The ice, cloud, and land elevation satellite -- 2 mission: A global
+  geolocated photon product derived from the advanced topographic laser
+  altimeter system.
+\newblock \emph{Remote Sensing of Environment}, 233:\penalty0 111325, 2019.
+
+\bibitem[Northcutt et~al.(2021{\natexlab{a}})Northcutt, Jiang, and
+  Chuang]{northcutt2021confident}
+Curtis Northcutt, Lu Jiang, and Isaac Chuang.
+\newblock Confident learning: Estimating uncertainty in dataset labels.
+\newblock \emph{Journal of Artificial Intelligence Research}, 70:\penalty0
+  1373--1411, 2021{\natexlab{a}}.
+
+\bibitem[Northcutt et~al.(2021{\natexlab{b}})Northcutt, Athalye, and
+  Mueller]{northcutt2021pervasive}
+Curtis~G Northcutt, Anish Athalye, and Jonas Mueller.
+\newblock Pervasive label errors in test sets destabilize machine learning
+  benchmarks.
+\newblock In \emph{NeurIPS Datasets and Benchmarks Track}, 2021{\natexlab{b}}.
+
+\bibitem[Otsu(1979)]{otsu1979threshold}
+Nobuyuki Otsu.
+\newblock A threshold selection method from gray-level histograms.
+\newblock \emph{IEEE Transactions on Systems, Man, and Cybernetics}, 9\penalty0
+  (1):\penalty0 62--66, 1979.
+
+\bibitem[Ploton et~al.(2020)Ploton, Mortier, R{\'e}jou-M{\'e}chain, Barbier,
+  Picard, Rossi, Dormann, Cornu, Viennois, Bayol, et~al.]{ploton2020spatial}
+Pierre Ploton, Fr{\'e}d{\'e}ric Mortier, Maxime R{\'e}jou-M{\'e}chain, Nicolas
+  Barbier, Nicolas Picard, Vivien Rossi, Carsten Dormann, Guillaume Cornu,
+  Gaelle Viennois, Nicolas Bayol, et~al.
+\newblock Spatial validation reveals poor predictive performance of large-scale
+  ecological mapping models.
+\newblock \emph{Nature Communications}, 11\penalty0 (1):\penalty0 4540, 2020.
+
+\bibitem[Poliak et~al.(2018)Poliak, Naradowsky, Haldar, Rudinger, and
+  Van~Durme]{poliak2018hypothesis}
+Adam Poliak, Jason Naradowsky, Aparajita Haldar, Rachel Rudinger, and Benjamin
+  Van~Durme.
+\newblock Hypothesis only baselines in natural language inference.
+\newblock In \emph{Joint Conference on Lexical and Computational Semantics},
+  2018.
+
+\bibitem[Ratner et~al.(2017)Ratner, Bach, Ehrenberg, Fries, Wu, and
+  R{\'e}]{ratner2017snorkel}
+Alexander Ratner, Stephen~H Bach, Henry Ehrenberg, Jason Fries, Sen Wu, and
+  Christopher R{\'e}.
+\newblock Snorkel: Rapid training data creation with weak supervision.
+\newblock \emph{Proceedings of the VLDB Endowment}, 11\penalty0 (3):\penalty0
+  269--282, 2017.
+
+\bibitem[Reimers and Gurevych(2017)]{reimers2017reporting}
+Nils Reimers and Iryna Gurevych.
+\newblock Reporting score distributions makes a difference: Performance study
+  of lstm-networks for sequence tagging.
+\newblock In \emph{EMNLP}, 2017.
+
+\bibitem[Roberts et~al.(2017)Roberts, Bahn, Ciuti, Boyce, Elith,
+  Guillera-Arroita, Hauenstein, Lahoz-Monfort, Schr{\"o}der, Thuiller,
+  et~al.]{roberts2017cross}
+David~R Roberts, Volker Bahn, Simone Ciuti, Mark~S Boyce, Jane Elith, Gurutzeta
+  Guillera-Arroita, Severin Hauenstein, Jos{\'e}~J Lahoz-Monfort, Boris
+  Schr{\"o}der, Wilfried Thuiller, et~al.
+\newblock Cross-validation strategies for data with temporal, spatial,
+  hierarchical, or phylogenetic structure.
+\newblock \emph{Ecography}, 40\penalty0 (8):\penalty0 913--929, 2017.
+
+\bibitem[Song et~al.(2023)Song, Kim, Park, Shin, and Lee]{song2022learning}
+Hwanjun Song, Minseok Kim, Dongmin Park, Yooju Shin, and Jae-Gil Lee.
+\newblock Learning from noisy labels with deep neural networks: A survey.
+\newblock \emph{IEEE Transactions on Neural Networks and Learning Systems},
+  34\penalty0 (11):\penalty0 8135--8153, 2023.
+
+\bibitem[Wang et~al.(2023)Wang, Zhang, Du, Xu, Liu, Tao, and
+  Zhang]{wang2023samrs}
+Di Wang, Jing Zhang, Bo Du, Minqiang Xu, Lin Liu, Dacheng Tao, and Liangpei
+  Zhang.
+\newblock {SAMRS}: Scaling-up remote sensing segmentation dataset with segment
+  anything model.
+\newblock In \emph{NeurIPS Datasets and Benchmarks Track}, 2023.
+
+\bibitem[Zech et~al.(2018)Zech, Badgeley, Liu, Costa, Titano, and
+  Oermann]{zech2018variable}
+John~R Zech, Marcus~A Badgeley, Manway Liu, Anthony~B Costa, Joseph~J Titano,
+  and Eric~Karl Oermann.
+\newblock Variable generalization performance of a deep learning model to
+  detect pneumonia in chest radiographs: A cross-sectional study.
+\newblock \emph{PLOS Medicine}, 15\penalty0 (11):\penalty0 e1002683, 2018.
+
+\bibitem[Zhang(2019)]{zhang2019shiftinvariant}
+Richard Zhang.
+\newblock Making convolutional networks shift-invariant again.
+\newblock In \emph{ICML}, 2019.
+
+\end{thebibliography}

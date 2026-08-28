@@ -1,0 +1,72 @@
+{
+ "what_this_is": "the exact cells this experiment is designed to have. A gate that infers what to expect from what it found cannot notice that something is absent or that something was substituted.",
+ "sea_ice": {
+  "unit": "acquisition",
+  "acquisitions": [
+   "20191103184432_05780",
+   "20191104195311_05940",
+   "20191106190152_06240",
+   "20191111200211_07010",
+   "20191113191053_07310",
+   "20191115195353_07620",
+   "20191116192813_07770",
+   "20191117190234_07920",
+   "20191118183654_08070",
+   "20191119194532_08230",
+   "20191120191952_08380",
+   "20191121185413_08530",
+   "20191122182834_08680",
+   "20191123180255_08830",
+   "20191124191133_08990",
+   "20191126182014_09290",
+   "20191127175434_09440"
+  ],
+  "arms": [
+   "original",
+   "scene"
+  ],
+  "seeds": [
+   7,
+   42
+  ],
+  "optical_replication_seeds": [
+   123,
+   314
+  ],
+  "primary_seed": 42,
+  "input_mode_by_seed": {
+   "42": "optical-only",
+   "7": "optical+ICESat-2 photon"
+  }
+ },
+ "flood": {
+  "unit": "event",
+  "events": [
+   "Bolivia",
+   "Ghana",
+   "India",
+   "Mekong",
+   "Nigeria",
+   "Pakistan",
+   "Paraguay",
+   "Somalia",
+   "Spain",
+   "Sri-Lanka",
+   "USA"
+  ],
+  "arms": [
+   "a000",
+   "a025",
+   "a050",
+   "a075",
+   "a100",
+   "offc",
+   "perm"
+  ],
+  "seeds": [
+   7,
+   42,
+   123
+  ]
+ }
+}

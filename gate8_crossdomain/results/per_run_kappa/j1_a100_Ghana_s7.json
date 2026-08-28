@@ -1,0 +1,23 @@
+{
+ "run": "j1_a100_Ghana_s7",
+ "event": "Ghana",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 9188240,
+ "n_artefact": 2177221,
+ "frac_artefact": 0.23695734982978242,
+ "p_own": 0.8679241803552546,
+ "p_other": 0.6190371274457251,
+ "kappa": 0.2488870529095295,
+ "kappa_pixel": 0.2616285853463889,
+ "n_pixels_A": 2177221,
+ "omega": 0.11858022859226074,
+ "n_instances": 26787886
+}

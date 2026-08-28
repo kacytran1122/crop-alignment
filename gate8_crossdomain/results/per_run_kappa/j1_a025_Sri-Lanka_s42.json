@@ -1,0 +1,23 @@
+{
+ "run": "j1_a025_Sri-Lanka_s42",
+ "event": "Sri-Lanka",
+ "alpha": null,
+ "arm": "a025",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 9963261,
+ "n_artefact": 2582853,
+ "frac_artefact": 0.25923771343539026,
+ "p_own": 0.5625211909975919,
+ "p_other": 0.5604336794136175,
+ "kappa": 0.0020875115839744302,
+ "kappa_pixel": 0.0021975173661797002,
+ "n_pixels_A": 2582853,
+ "omega": 0.010227188428346091,
+ "n_instances": 31443187
+}

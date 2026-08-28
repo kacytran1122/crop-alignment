@@ -1,0 +1,23 @@
+{
+ "run": "arch_efficientnet-b0_a100_Ghana_s42",
+ "event": "Ghana",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 9188240,
+ "n_artefact": 2177221,
+ "frac_artefact": 0.23695734982978242,
+ "p_own": 0.8946034412719241,
+ "p_other": 0.6206328718932814,
+ "kappa": 0.27397056937864284,
+ "kappa_pixel": 0.2917116357570381,
+ "n_pixels_A": 2177221,
+ "omega": 0.11423808019841035,
+ "n_instances": 26787886
+}

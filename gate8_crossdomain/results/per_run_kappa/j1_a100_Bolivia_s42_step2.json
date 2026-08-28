@@ -1,0 +1,23 @@
+{
+ "run": "j1_a100_Bolivia_s42",
+ "event": "Bolivia",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 2,
+ "grid_stride": 64,
+ "n_crops_per_chip": 49,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 2824370,
+ "n_artefact": 496113,
+ "frac_artefact": 0.175654393723202,
+ "p_own": 0.8480765558361094,
+ "p_other": 0.4445863965011304,
+ "kappa": 0.403490159334979,
+ "kappa_pixel": 0.42327420029979734,
+ "n_pixels_A": 496113,
+ "omega": 0.13441741612247632,
+ "n_instances": 1790902
+}

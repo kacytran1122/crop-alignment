@@ -1,0 +1,23 @@
+{
+ "run": "arch_mit_b0_a000_Nigeria_s42",
+ "event": "Nigeria",
+ "alpha": null,
+ "arm": "a000",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 4020518,
+ "n_artefact": 917901,
+ "frac_artefact": 0.2283041637918298,
+ "p_own": 0.5473413117621716,
+ "p_other": 0.5466459328004151,
+ "kappa": 0.000695378961756525,
+ "kappa_pixel": 0.0008163958059698519,
+ "n_pixels_A": 917901,
+ "omega": 0.00863872050272371,
+ "n_instances": 11343169
+}

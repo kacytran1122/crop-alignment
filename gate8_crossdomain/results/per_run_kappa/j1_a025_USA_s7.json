@@ -1,0 +1,23 @@
+{
+ "run": "j1_a025_USA_s7",
+ "event": "USA",
+ "alpha": null,
+ "arm": "a025",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 17638830,
+ "n_artefact": 4285648,
+ "frac_artefact": 0.24296668203049748,
+ "p_own": 0.5458716388406445,
+ "p_other": 0.543425789104794,
+ "kappa": 0.0024458497358505766,
+ "kappa_pixel": 0.002722757978993449,
+ "n_pixels_A": 4285648,
+ "omega": 0.019701865718822792,
+ "n_instances": 52527151
+}

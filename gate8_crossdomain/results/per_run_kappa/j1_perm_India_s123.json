@@ -1,0 +1,23 @@
+{
+ "run": "j1_perm_India_s123",
+ "event": "India",
+ "alpha": null,
+ "arm": "perm",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 14950528,
+ "n_artefact": 3361956,
+ "frac_artefact": 0.2248720580303251,
+ "p_own": 0.6532866586355617,
+ "p_other": 0.5945121820917922,
+ "kappa": 0.05877447654376945,
+ "kappa_pixel": 0.06153643995797491,
+ "n_pixels_A": 3361956,
+ "omega": 0.0811852010105144,
+ "n_instances": 41051221
+}

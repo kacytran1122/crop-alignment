@@ -1,0 +1,23 @@
+{
+ "run": "j1_offc_Ghana_s42",
+ "event": "Ghana",
+ "alpha": null,
+ "arm": "offc",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 9188240,
+ "n_artefact": 2177221,
+ "frac_artefact": 0.23695734982978242,
+ "p_own": 0.5195701146406252,
+ "p_other": 0.5210727286187502,
+ "kappa": -0.001502613978124935,
+ "kappa_pixel": -0.0013928837894457294,
+ "n_pixels_A": 2177221,
+ "omega": 0.004072707006511882,
+ "n_instances": 26787886
+}

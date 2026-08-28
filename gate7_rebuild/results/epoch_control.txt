@@ -1,0 +1,22 @@
+================================================================================================
+CONVERGED-BUDGET CONTROL: does the premium survive 60 epochs?
+================================================================================================
+held-out acquisition       prem@12   prem@60     delta    stop epoch
+20191103184432_05780       +0.0507   +0.0749   +0.0242     46 / 50   
+20191113191053_07310       +0.0307   +0.0572   +0.0265     42 / 32   
+20191119194532_08230       +0.0706   +0.0773   +0.0067     26 / 59   
+20191120191952_08380       +0.0241   +0.0415   +0.0175     44 / 56   
+20191122182834_08680       +0.0941   +0.0970   +0.0030     51 / 41   
+20191127175434_09440       -0.1466   -0.0583   +0.0883     46 / 51   
+
+12 epochs    premium +0.0206  sd 0.0859  t  0.59  positive 5/6
+
+60 epochs    premium +0.0483  sd 0.0555  t  2.13  positive 5/6
+
+paired change +0.0277  sd 0.0311  t  2.18
+
+long runs that hit the cap without early stopping: 7/12
+  best epochs: 26, 32, 41, 42, 44, 46, 46, 50, 51, 51, 56, 59
+  -> 7 of 12 were still improving at 60 epochs, so 60 is closer to
+     converged than 12 but is NOT converged. Report the premium at 60
+     as a lower bound on the converged-budget premium, not as its value.

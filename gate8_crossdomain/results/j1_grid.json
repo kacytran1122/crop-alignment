@@ -1,0 +1,39 @@
+{
+ "events": [
+  "Bolivia",
+  "Ghana",
+  "India",
+  "Mekong",
+  "Nigeria",
+  "Pakistan",
+  "Paraguay",
+  "Somalia",
+  "Spain",
+  "Sri-Lanka",
+  "USA"
+ ],
+ "n_events": 11,
+ "crops_per_chip": {
+  "stride32": 169,
+  "stride64": 49
+ },
+ "a_frac": {
+  "stride32": 0.24705443938003124,
+  "stride64": 0.163081672155106
+ },
+ "kappa_a100": {
+  "stride32": 0.26558877120900964,
+  "stride64": 0.4569942758338916
+ },
+ "kappa_a000": {
+  "stride32": -0.0009819717964611057,
+  "stride64": -0.0017353156562062801
+ },
+ "contrast": {
+  "stride32": 0.2665707430054707,
+  "stride64": 0.4587295914900979
+ },
+ "ratio": 1.7208549832517954,
+ "spearman": 0.9181818181818183,
+ "pearson": 0.9780538470891643
+}

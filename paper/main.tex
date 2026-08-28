@@ -1,0 +1,82 @@
+% WACV 2027 submission, Evaluations and Datasets track.
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[review,datasets]{wacv}
+
+\input{preamble}
+
+\definecolor{wacvblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=wacvblue]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+% cleveref is already loaded by wacv.sty (line 519) with [capitalize];
+% loading it again causes an option clash.
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+% wacv.sty loads cleveref at \AtEndPreamble and sets the house style there:
+% \cref gives "Sec." and \Cref gives "Section". We use \Cref for sections
+% throughout and \cref for equations, tables and figures.
+
+\def\wacvPaperID{3638}
+\def\confName{WACV}
+\def\confYear{2027}
+\newcommand{\publicCodeURL}{camera-ready repository URL}
+\newcommand{\anonymousCodeURL}{anonymous review repository URL}
+
+\newcommand{\kap}{\kappa}
+% the crop-read weighting, reported beside the source-pixel one
+\newcommand{\kapcr}{\kappa_{\mathrm{cr}}}
+\newcommand{\A}{\mathcal{A}}
+% \mathbb{1} is not a glyph in the default fonts and renders as a struck symbol.
+\newcommand{\ind}[1]{\mathbf{1}\!\left[ #1 \right]}
+\newcommand{\own}{\mathrm{own}}
+\newcommand{\oth}{\mathrm{oth}}
+
+\begin{document}
+
+\title{Crop-Label Alignment: Auditing Crop-Dependent\\Auto-Labels in Remote-Sensing Segmentation}
+
+% wacv.sty anonymises this automatically in review mode.
+\author{First Author\\
+Institution1\\
+Institution1 address\\
+{\tt\small firstauthor@i1.org}
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\
+{\tt\small secondauthor@i2.org}
+}
+
+\maketitle
+
+\input{sec/0_abstract}
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_kappa}
+\input{sec/4_verify}
+\input{sec/6b_setup}
+\input{sec/5_calibration}
+\input{sec/6_cost}
+\input{sec/7_wild}
+\input{sec/9_discussion}
+
+\iftoggle{wacvfinal}{\paragraph{Code and data.}
+The public repository is available at \url{\publicCodeURL}.}{}
+
+% lineno can place two independent numbers into the bibliography gutter when a
+% reference wraps across columns.  Keep review lines on the entire paper body, but
+% disable them for references so the rendered entries remain legible.
+\nolinenumbers
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+\end{document}

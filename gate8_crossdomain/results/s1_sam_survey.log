@@ -1,0 +1,48 @@
+chips 40  crop 128  stride 32  points_per_side 16
+  2/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 29.90%
+  3/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.58%
+  4/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 2.98%
+  5/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.18%
+  6/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 35.65%
+  7/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 26.99%
+  8/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 9.30%
+  9/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 10.28%
+  10/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 28.81%
+  11/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.41%
+  12/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.13%
+  13/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 43.64%
+  14/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 13.46%
+  15/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 6.72%
+  16/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.17%
+  17/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 42.01%
+  18/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.84%
+  19/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 2.25%
+  20/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.62%
+  21/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.80%
+  22/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.58%
+  23/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.80%
+  26/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.87%
+  27/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 26.98%
+  28/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.04%
+  29/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.16%
+  30/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.37%
+  31/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.96%
+  32/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.49%
+  33/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.53%
+  34/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 1.35%
+  35/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.70%
+  36/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.24%
+  37/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.49%
+  38/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.67%
+  39/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 0.49%
+  40/40  fixed threshold 0.00%  SAM per scene 0.00%  SAM per crop 29.27%
+
+========================================================================
+A FOUNDATION-MODEL LABELLER WITH A FIXED SEMANTIC RULE
+threshold -17.5 dB, never refitted; dB range -30 to 0, global
+========================================================================
+arm                               mean P(A)        max   chips
+fixed threshold, per pixel           0.00%      0.00%      37
+SAM per scene                        0.00%      0.00%      37
+SAM per crop                         8.80%     43.64%      37
+wrote runs/s1_sam_survey.json

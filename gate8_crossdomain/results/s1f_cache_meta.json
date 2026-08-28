@@ -1,0 +1,25 @@
+{
+ "n": 446,
+ "events": [
+  "Bolivia",
+  "Ghana",
+  "India",
+  "Mekong",
+  "Nigeria",
+  "Pakistan",
+  "Paraguay",
+  "Somalia",
+  "Spain",
+  "Sri-Lanka",
+  "USA"
+ ],
+ "mean": [
+  -10.483016967773438,
+  -17.3624210357666
+ ],
+ "std": [
+  4.178468704223633,
+  4.863168716430664
+ ],
+ "agreement": 0.9230754184892533
+}

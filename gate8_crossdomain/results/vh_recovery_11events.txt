@@ -1,0 +1,26 @@
+radius     kernel mean|diff|      bias agreement
+       0 1x1           1.107    -1.107    0.9515
+       1 3x3           0.737    -0.737    0.9691
+       2 5x5           0.305    -0.305    0.9822
+       3 7x7           0.131    -0.131    0.9896
+       4 9x9           0.040    -0.026    0.9908
+       5 11x11         0.078    +0.041    0.9870
+       7 15x15         0.159    +0.111    0.9782
+
+  best radius 4 (9x9 focal mean): mean |difference| 0.040 dB, agreement 0.9908
+
+  per event at the best radius:
+  event         published  recovered     diff     agree
+  bolivia          -20.44     -20.42    +0.02    0.9936
+  ghana            -22.81     -22.86    -0.05    0.9978
+  india            -21.56     -21.54    +0.02    0.9949
+  mekong           -23.06     -23.02    +0.04    0.9942
+  nigeria          -21.94     -22.03    -0.09    0.9920
+  pakistan         -19.56     -19.60    -0.04    0.9755
+  paraguay         -19.94     -19.99    -0.05    0.9901
+  somalia          -21.06     -21.10    -0.04    0.9768
+  spain            -25.13     -25.14    -0.01    0.9948
+  sri-lanka        -21.69     -21.69    -0.00    0.9944
+  usa              -22.62     -22.70    -0.08    0.9954
+
+  within 0.25 dB of the published constant: 11/11 events

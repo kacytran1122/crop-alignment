@@ -1,0 +1,23 @@
+{
+ "run": "j1_a050_Spain_s7",
+ "event": "Spain",
+ "alpha": null,
+ "arm": "a050",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 7727802,
+ "n_artefact": 2057116,
+ "frac_artefact": 0.26619677885121795,
+ "p_own": 0.580720858942244,
+ "p_other": 0.562569335935498,
+ "kappa": 0.01815152300674611,
+ "kappa_pixel": 0.019299718175753853,
+ "n_pixels_A": 2057116,
+ "omega": 0.024698755132711643,
+ "n_instances": 25376421
+}

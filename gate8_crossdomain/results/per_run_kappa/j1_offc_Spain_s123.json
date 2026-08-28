@@ -1,0 +1,23 @@
+{
+ "run": "j1_offc_Spain_s123",
+ "event": "Spain",
+ "alpha": null,
+ "arm": "offc",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 7727802,
+ "n_artefact": 2057116,
+ "frac_artefact": 0.26619677885121795,
+ "p_own": 0.5480044250526896,
+ "p_other": 0.5480991702726208,
+ "kappa": -9.474521993110259e-05,
+ "kappa_pixel": -0.00013760641914328233,
+ "n_pixels_A": 2057116,
+ "omega": 0.010354949144245496,
+ "n_instances": 25376421
+}

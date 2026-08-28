@@ -1,0 +1,23 @@
+{
+ "run": "j1_a100_Pakistan_s42",
+ "event": "Pakistan",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 2,
+ "grid_stride": 64,
+ "n_crops_per_chip": 49,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5375862,
+ "n_artefact": 907434,
+ "frac_artefact": 0.16879785976648953,
+ "p_own": 0.8709324902058574,
+ "p_other": 0.4327826447896834,
+ "kappa": 0.4381498454161739,
+ "kappa_pixel": 0.4680617727202933,
+ "n_pixels_A": 907434,
+ "omega": 0.12196868091188123,
+ "n_instances": 3188130
+}

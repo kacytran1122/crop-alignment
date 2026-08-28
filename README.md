@@ -1,156 +1,99 @@
-# Crop Alignment
+# Crop-Label Alignment
 
-**A Structural-Null Test for Closed-Loop Labels in Segmentation Benchmarks**
+**Auditing crop-dependent auto-labels in remote-sensing segmentation**
 
-[![Quality checks](https://github.com/kacytran1122/crop-alignment/actions/workflows/quality.yml/badge.svg)](https://github.com/kacytran1122/crop-alignment/actions/workflows/quality.yml)
+[Paper](paper/main.pdf) |
+[Supplement](paper/supp.pdf) |
+[Reproduce](REPRODUCE.md) |
+[Artifact notes](SUPPLEMENT_README.md)
 
-[Paper](paper/crop_alignment_wacv_2027.pdf) ·
-[Supplement](paper/crop_alignment_wacv_2027_supplement.pdf) ·
-[Reproducibility guide](docs/reproducibility_guide.md) ·
-[Artifact audit](docs/artifact_audit.md)
+This repository contains the WACV 2027 review artifact for a benchmark audit of
+crop-dependent automatic labels. The central question is simple: if two
+overlapping crops show the same source pixel, do their automatically generated
+labels agree? If not, a model can be rewarded for following the crop window
+rather than the scene.
 
-Many segmentation benchmarks use labels produced automatically from the same
-imagery given to a model. If the labeller is applied separately to each crop, two
-overlapping crops can assign different labels to the same physical pixel. A model
-can then improve its benchmark score by learning this crop-dependent labelling rule
-rather than the underlying phenomenon.
+The paper introduces crop-label alignment, a diagnostic that is exactly zero for
+any predictor whose output is independent of the crop being read. A nonzero value
+on the disagreement set indicates that model predictions align with
+crop-specific labels.
 
-This repository introduces **crop alignment** ($\kappa$), a structural-null test
-for that crop-dependent shortcut. It is not a general test for every kind of
-closed-loop or input-derived label.
+![Model and crop-label alignment audit](paper/figures/crop_alignment_architecture.png)
 
-![Model architecture and crop-alignment audit](paper/figures/crop_alignment_architecture.png)
+## Current WACV Artifact
 
-## Main result
+| Item | Location |
+|---|---|
+| Main review PDF | `paper/main.pdf` |
+| Supplement PDF | `paper/supp.pdf` |
+| Main LaTeX source | `paper/main.tex` |
+| Supplement source | `paper/supp.tex` |
+| Standalone diagnostic | `cropalign.py` |
+| End-to-end verifier | `verify.py` |
+| Release notes | `SUPPLEMENT_README.md` |
 
-On the audited sea-ice benchmark, the 16 folds with committed machine-readable
-evidence give:
+The review PDFs are anonymous. The LaTeX source contains the public repository
+URL for camera-ready mode, but the review-mode PDF withholds it for double-blind
+submission. Use an anonymized 4open.science mirror for WACV review.
 
-| Measurement | Result |
-|---|---:|
-| Crop alignment, benchmark-label training | `+0.1230` |
-| Crop alignment, matched control | `+0.0157` |
-| Paired crop-alignment difference | **`+0.1073`** |
-| Paired t statistic | **`12.88`** |
-| Positive paired folds | **`16 / 16`** |
+## Main Result
 
-For any crop-invariant predictor, $\kappa=0$ exactly by construction. On a
-per-pixel threshold that cannot observe crop context, the implementation returns
-zero to floating-point precision. The theorem requires a nonempty set of pixels on
-which overlapping crops disagree. If that set is empty, $\kappa$ is not estimable;
-this is not evidence that the labels are shortcut-free.
+On the audited sea-ice benchmark, the optical-only primary model trained on
+per-patch labels shows stronger crop-label alignment than its matched
+scene-label control. The contrast is positive on every held-out acquisition, but
+the paper reports it descriptively because the folds share geography, tiles and
+most training data.
 
-## Contributions
+That evidence boundary is intentional: the artifact verifies supported claims
+without pretending that dependent folds are independent samples.
 
-- A crop-alignment estimand with an exact structural null.
-- A standalone NumPy implementation in [`crop_alignment.py`](crop_alignment.py).
-- Controlled calibration on a crop-dependence dial.
-- Evaluation against expert flood labels to measure the cost of the shortcut.
-- Machine-readable verification of every supported headline statistic.
-- WACV-formatted paper source, supplementary material, and code-faithful vector
-  architecture diagram.
-
-## Quick start
-
-Python 3.10 or newer is recommended.
+## Quick Start
 
 ```bash
-git clone https://github.com/kacytran1122/crop-alignment.git
-cd crop-alignment
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+python cropalign.py
+python verify.py
 ```
 
-Run the standalone self-test and verify the paper statistics:
+The verifier checks the released code, evidence tables and paper-facing
+aggregates. It is designed to fail loudly if a required artifact is missing.
 
-```bash
-python crop_alignment.py
-python experiments/sea_ice/src/verify_paper_numbers.py
-```
-
-The self-test should end with `all checks passed`. The paper verifier reports
-`pass_with_warnings`: the warnings deliberately expose aggregate results whose
-underlying per-run artifacts are not present rather than treating them as fully
-reproducible evidence.
-
-## Repository structure
+## Repository Structure
 
 ```text
-crop_alignment.py           standalone crop-alignment implementation
+cropalign.py                 standalone crop-label-alignment implementation
+verify.py                    artifact verification entry point
+DESIGN.json                  expected experiment grid
+REPRODUCE.md                 command guide for regenerating reported quantities
 experiments/
-  sea_ice/                   training, audit code, and compact result artifacts
-  floods/                    calibration and cross-domain mechanism checks
-paper/                       WACV source, figures, review PDF, and supplement
-docs/
-  artifact_audit.md          corrected claims and artifact evidence levels
-  reproducibility_guide.md   data preparation and RTX A6000 instructions
+  sea_ice/                   compact sea-ice evidence and scripts
+  floods/                    flood calibration and external mechanism checks
+paper/
+  main.tex                   WACV review manuscript source
+  main.pdf                   WACV review manuscript
+  supp.tex                   supplementary source
+  supp.pdf                   supplementary PDF
+  figures/                   paper figures, including architecture diagram
+docs/                        audit and reproducibility notes
 ```
 
-Raw imagery, generated caches, model checkpoints, and local training directories
-are excluded from Git. The compact release verifies the primary machine-readable
-result without pretending to reproduce runs whose required artifacts are absent.
-
-## RTX A6000 retraining
-
-Training requires the source datasets and a CUDA host. After preparing the data
-layout documented in [`docs/reproducibility_guide.md`](docs/reproducibility_guide.md), install
-the GPU environment and launch the long sea-ice sweep:
-
-```bash
-python -m pip install -r requirements_a6000.txt
-bash experiments/sea_ice/src/run_epoch_120.sh
-```
-
-The runner is resumable and schedules treatment/control jobs across GPU 0 and GPU
-1. All released scripts use repository-relative paths.
-
-## Building the paper
-
-With [Tectonic](https://tectonic-typesetting.github.io/) installed:
-
-```bash
-cd paper
-tectonic -X compile crop_alignment_wacv_2027.tex
-tectonic -X compile crop_alignment_wacv_2027_supplement.tex
-python validate_layout.py
-python validate_submission.py
-```
-
-The committed review PDF contains eight pages of main content, with references
-beginning on page 9. The public repository URL is present in the LaTeX source but
-is hidden in review mode for double-blind submission and enabled in camera-ready
-mode.
-
-## Artifact integrity
-
-An earlier draft reported a 17-fold aggregate (`+0.1106`, `t=13.01`) from a text
-summary, while the committed JSON contains only 16 paired folds. This release uses
-the reproducible 16-fold result (`+0.1073`, `t=12.88`) in the abstract and
-conclusion and discloses the unmatched text-only row.
-
-The 60- and 120-epoch aggregates are retained as sensitivity evidence, not as
-independently reproducible headline claims, because their per-run JSON and
-checkpoints are not included. Flood calibration/cost rows are likewise available as
-summary logs. Unpublished model-comparison effects used in an earlier draft were
-removed because this repository has neither a citable public source nor the
-fold-level evidence needed to support them. The compact release verifies supported
-aggregate arithmetic; it does not reproduce training end to end. Full details are in the
-[`artifact audit`](docs/artifact_audit.md).
+Large raw imagery, local caches, model checkpoints and private training outputs
+are intentionally excluded. The artifact verifies the claims it can support and
+labels summary-only evidence explicitly.
 
 ## Citation
 
-The repository is currently anonymized for double-blind review. Use the paper title
-to refer to this artifact during review; an author-complete BibTeX entry will replace
-this block for the camera-ready release.
+During double-blind review, cite the paper by title and use the anonymous
+artifact link. The camera-ready repository citation will use the public URL:
 
 ```bibtex
-@misc{crop_alignment_2027,
-  title  = {Crop Alignment: A Structural-Null Test for Closed-Loop Labels in
-            Segmentation Benchmarks},
+@misc{crop_label_alignment_2027,
+  title  = {Crop-Label Alignment: Auditing Crop-Dependent Auto-Labels in Remote-Sensing Segmentation},
   author = {Anonymous Authors},
   year   = {2027},
-  note   = {WACV submission and reproducibility artifact}
+  note   = {WACV review artifact}
 }
 ```

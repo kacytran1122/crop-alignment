@@ -1,0 +1,26 @@
+chips: 446   crop 128   stride 32   crops/chip 169
+  50/446
+  100/446
+  150/446
+  200/446
+  250/446
+  300/446
+  350/446
+  400/446
+
+==========================================================================
+WHICH LABELLING PRACTICES ARE CROP-SAFE
+  P(A) = share of multiply-covered pixels whose covering crops disagree
+==========================================================================
+rule                              fitted?  mean P(A)   max P(A)
+fixed global constant                  no     0.00%      0.00%
+fixed, per scene (Otsu)                no     0.00%      0.00%
+per-crop Otsu                         yes    17.58%     40.90%
+per-crop k-means                      yes    17.65%     40.70%
+per-crop 45th percentile              yes    16.02%     32.49%
+per-crop min-max, then fixed          yes    12.54%     54.82%
+
+A labeller with P(A) = 0 has an empty artefact set, so kappa is zero for
+any model by the proposition and there is nothing for a model to learn.
+wrote <repo>/runs/labeller_survey.json
+SURVEY_DONE

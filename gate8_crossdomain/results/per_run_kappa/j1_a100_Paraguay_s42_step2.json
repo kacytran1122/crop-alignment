@@ -1,0 +1,23 @@
+{
+ "run": "j1_a100_Paraguay_s42",
+ "event": "Paraguay",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 2,
+ "grid_stride": 64,
+ "n_crops_per_chip": 49,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 16626431,
+ "n_artefact": 2828694,
+ "frac_artefact": 0.17013236334364243,
+ "p_own": 0.8939428464076746,
+ "p_other": 0.418921408507892,
+ "kappa": 0.4750214378997826,
+ "kappa_pixel": 0.5090099883550502,
+ "n_pixels_A": 2828694,
+ "omega": 0.12602148637579236,
+ "n_instances": 9900690
+}

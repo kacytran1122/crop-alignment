@@ -1,0 +1,23 @@
+{
+ "run": "j1_offc_India_s123",
+ "event": "India",
+ "alpha": null,
+ "arm": "offc",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 14950528,
+ "n_artefact": 3361956,
+ "frac_artefact": 0.2248720580303251,
+ "p_own": 0.5380567364853777,
+ "p_other": 0.5380043336064358,
+ "kappa": 5.240287894177069e-05,
+ "kappa_pixel": 6.692762191347632e-05,
+ "n_pixels_A": 3361956,
+ "omega": 0.005686767047353413,
+ "n_instances": 41051221
+}

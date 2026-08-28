@@ -1,0 +1,78 @@
+{
+ "seed": 42,
+ "s_within_db": 1.453363786020463,
+ "n_chips": 446,
+ "n_usable_chips": 440,
+ "n_crops_per_chip": 169,
+ "dial": {
+  "a000": 0.0,
+  "a025": 0.25,
+  "a050": 0.5,
+  "a075": 0.75,
+  "a100": 1.0
+ },
+ "events": [
+  "bolivia",
+  "ghana",
+  "india",
+  "mekong",
+  "nigeria",
+  "pakistan",
+  "paraguay",
+  "somalia",
+  "spain",
+  "sri-lanka",
+  "usa"
+ ],
+ "scramble_geometry": {
+  "assignments": 75374,
+  "fixed_points": 461,
+  "overlapping_pairs": 16418,
+  "overlapping_fraction": 0.2178204685965983,
+  "mean_shared_area_fraction": 0.07709720858651524,
+  "mapping_sha256_int16_c_order": "495a5e0a6cab21b01be7cd5ababe91c841a2de207ebcf9b6474317bcc75d396f",
+  "population": "all 446 serialized rows, including six excluded chips"
+ },
+ "threshold_accounting": {
+  "total_positions": 75374,
+  "direct_crop_fits": 72029,
+  "finite_chip_fallbacks": 2331,
+  "unresolved_positions": 1014,
+  "unusable_chips": 6
+ },
+ "summary_population": "common usable chips",
+ "arms": {
+  "pub": {
+   "mean_db": -21.798227272727274,
+   "within_chip_sd_db": 4.844609562000683e-16
+  },
+  "a000": {
+   "mean_db": -21.798227272727274,
+   "within_chip_sd_db": 4.844609562000683e-16
+  },
+  "a025": {
+   "mean_db": -20.79757620152329,
+   "within_chip_sd_db": 0.36334094650511584
+  },
+  "a050": {
+   "mean_db": -19.796925130319313,
+   "within_chip_sd_db": 0.7266818930102317
+  },
+  "a075": {
+   "mean_db": -18.796274059115333,
+   "within_chip_sd_db": 1.0900228395153475
+  },
+  "a100": {
+   "mean_db": -17.795622987911354,
+   "within_chip_sd_db": 1.453363786020463
+  },
+  "perm": {
+   "mean_db": -17.795622987911354,
+   "within_chip_sd_db": 1.4533637860204633
+  },
+  "offc": {
+   "mean_db": -21.865587520980487,
+   "within_chip_sd_db": 2.6525866704945446e-15
+  }
+ }
+}

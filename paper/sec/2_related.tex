@@ -1,0 +1,75 @@
+\section{Related work}
+\label{sec:related}
+
+Crop-dependent labelling sits between several literatures. The distinction this paper
+turns on is the one between shortcut learning and label noise.
+
+\paragraph{Shortcut learning.} Documented cases include
+hospital-specific tokens in chest radiographs~\cite{zech2018variable}, background
+rather than animal in wildlife recognition~\cite{beery2018terra}, and the general
+account of shortcut learning as a property of gradient descent rather than of any
+one dataset~\cite{geirhos2020shortcut, lapuschkin2019unmasking}. In each case the cue
+was identified after a model had trained and generalised badly. Crop-label alignment
+is a forward test with a value known under the null, so it names the cue in advance.
+
+\paragraph{Annotation artefacts and partial-input baselines.} The closest analogues
+are partial-input baselines. Hypothesis-only models on natural language inference
+showed that labels were partly predictable from the annotation process, and that
+leaderboard progress had been measuring that
+predictability~\cite{gururangan2018annotation, poliak2018hypothesis}; vision does the
+same with question-only baselines~\cite{goyal2017making, jabri2016revisiting}, whose
+licensed inference has itself been questioned~\cite{feng2019misleading}. The
+difference is that a crowdworker's habits cannot be recovered and an algorithmic
+labeller can: we invert one to its constant in 17 of 17 folds and recover another's
+threshold and kernel to within 0.25\,dB on 11 of 11 events, which lets us build the
+artefact with a dial instead of only detecting it.
+
+\paragraph{Relation to label noise.} The standard frame for imperfect
+labels is noise, with a large literature on robust losses, noise-transition
+estimation, and the observation that many test labels in standard benchmarks are
+simply wrong~\cite{song2022learning, northcutt2021confident,
+northcutt2021pervasive}. Crop-dependent error sits at one end of that literature
+rather than outside it: input-independent noise supplies no stable input-predictive
+signal, whereas instance-dependent noise can, and a crop-dependent label is the
+limiting case, fixed by the crop the model is reading. A predictor can therefore
+align with it and be rewarded under patch scoring where input-independent noise is
+only penalised. The appropriate remedy is to generate labels outside the crop and
+evaluate at source-pixel resolution.
+
+\paragraph{Weak and programmatic supervision.} Labelling functions and
+foundation-model pseudo-labels are two mechanisms that can produce crop-dependent
+labels at scale~\cite{ratner2017snorkel,wang2023samrs}. What matters is what the labelling
+function reads: a per-pixel rule survives being applied per crop, a rule with a
+threshold estimated from the crop does not. Benchmarks shipping expert labels beside
+algorithmic ones~\cite{aybar2022cloudsen12} would let $\kap$ and its association with
+expert-label performance be
+evaluated without constructing anything.
+
+\paragraph{Overlapping windows and tiling artefacts.} Cross-window consistency has
+been used as a training loss on overlapping predictions~\cite{dang2023crosswindow},
+and remote-sensing work documents boundary errors from tiled inference and
+stitching~\cite{huang2019tiling}. Recent reference-free seam metrics test whether
+prediction gradients at tile boundaries differ from surrounding
+content~\cite{carrara2026switi}. Those methods ask whether predictions agree across
+windows or form visible seams. $P(\A)$ instead uses labels only, $\Omega$ uses
+prediction variation only, and $\kap$ conditions on label disagreement and signs
+that variation by which crop's label the prediction follows. Consequently seam or
+consistency metrics can fire when labels are crop-invariant (where $\kap$ is
+undefined), while $\kap=0$ can also hide cancelling signed effects. The diagnostic
+is therefore narrower and complements overlap consistency.
+
+\paragraph{Benchmark statistics.} A separate line argues that benchmark comparisons
+are reported without the variance or the power to support them, and that seed and
+data-order variation can exceed the differences
+claimed~\cite{bouthillier2021accounting, reimers2017reporting, card2020little,
+damour2022underspecification}. We therefore treat held-out folds as descriptive
+evaluation units rather than independent replicates.
+
+\paragraph{Spatial validation.} Splitting spatially autocorrelated data at random
+inflates measured skill~\cite{roberts2017cross, ploton2020spatial,
+karasiak2022spatial, kattenborn2022spatially}, and treating correlated observations
+as independent replicates has a long history~\cite{hurlbert1984pseudoreplication};
+the leakage taxonomy places this among failures that survive peer
+review~\cite{kapoor2023leakage}. Our protocol repairs are the standard remedies
+applied to a benchmark that used none; what we add is a diagnostic for the label
+alignment that can remain after those choices.

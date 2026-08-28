@@ -1,0 +1,23 @@
+{
+ "run": "arch_efficientnet-b0_a000_Spain_s42",
+ "event": "Spain",
+ "alpha": null,
+ "arm": "a000",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 7727802,
+ "n_artefact": 2057116,
+ "frac_artefact": 0.26619677885121795,
+ "p_own": 0.5444117986535612,
+ "p_other": 0.545652008279723,
+ "kappa": -0.0012402096261619766,
+ "kappa_pixel": -0.001488207245028924,
+ "n_pixels_A": 2057116,
+ "omega": 0.020293220627935683,
+ "n_instances": 25376421
+}

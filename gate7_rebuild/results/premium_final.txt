@@ -1,0 +1,19 @@
+============================================================================================================
+THE ARTEFACT PREMIUM
+============================================================================================================
+
+standard LOAO (tiles may recur across the boundary):
+  seed 42                      n=17  premium +0.0488  t= 4.12  CI [+0.0237,+0.0740]  boot [+0.0241,+0.0694]  sign 16/17 p=0.0003
+  seed 7                       n=17  premium +0.0462  t= 4.18  CI [+0.0228,+0.0695]  boot [+0.0236,+0.0658]  sign 16/17 p=0.0003
+  seed 123: 0 complete folds, skipped
+
+tile-disjoint LOAO (no shared ground):
+  seed 42, disjoint            n=17  premium +0.0436  t= 3.92  CI [+0.0200,+0.0672]  boot [+0.0208,+0.0631]  sign 15/17 p=0.0023
+
+across 2 seeds: premium per seed +0.0488, +0.0462
+  seed-averaged                n=17  premium +0.0475  t= 4.17  CI [+0.0233,+0.0716]  boot [+0.0239,+0.0675]  sign 16/17 p=0.0003
+  ratio loao_s42           1.66x
+  ratio loao_s7            1.63x
+  ratio disjoint_s42       1.60x
+
+wrote <repo>/runs/premium_final.json

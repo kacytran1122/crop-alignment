@@ -1,0 +1,21 @@
+{
+ "n_chips": 446,
+ "crop": 128,
+ "stride": 32,
+ "scale": 3000.0,
+ "n_crops": 75374,
+ "first": {
+  "range_differs": 787,
+  "already_identity": 74418,
+  "constant_array": 956,
+  "pixels_changed": 0,
+  "identity_fraction": 0.9873165813145116
+ },
+ "second": {
+  "range_differs": 787,
+  "already_identity": 74587,
+  "constant_array": 956,
+  "pixels_changed": 0,
+  "identity_fraction": 0.9895587337808793
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "run": "loao_original_20191104195311_05940_s7",
+ "acq": "20191104195311_05940",
+ "labels": "original",
+ "eval_labels": "original",
+ "seed": 7,
+ "n_covered": 9955647,
+ "n_artefact": 1301197,
+ "frac_artefact": 0.13069939100894196,
+ "p_own": 0.7843610633663335,
+ "p_other": 0.6555280184803655,
+ "kappa": 0.1288330448859681,
+ "kappa_pixel": 0.1570070010964355,
+ "n_pixels_A": 1301197,
+ "omega": 0.04277419389227805,
+ "n_instances": 22419555,
+ "photon_mode": "true",
+ "input_mode": "optical+ICESat-2 photon",
+ "optical_normalisation": "fixed ImageNet RGB mean/std",
+ "photon_normalisation": "fold-local non-test-acquisition mean/std"
+}

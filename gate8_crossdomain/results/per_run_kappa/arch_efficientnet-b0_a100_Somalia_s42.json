@@ -1,0 +1,23 @@
+{
+ "run": "arch_efficientnet-b0_a100_Somalia_s42",
+ "event": "Somalia",
+ "alpha": null,
+ "arm": "a100",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5374091,
+ "n_artefact": 1377871,
+ "frac_artefact": 0.2563914529917711,
+ "p_own": 0.8936400952085298,
+ "p_other": 0.6293207977783289,
+ "kappa": 0.26431929743020094,
+ "kappa_pixel": 0.2785280248785178,
+ "n_pixels_A": 1377871,
+ "omega": 0.11245472513904296,
+ "n_instances": 16798915
+}

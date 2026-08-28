@@ -1,0 +1,23 @@
+{
+ "run": "j1_perm_Pakistan_s42",
+ "event": "Pakistan",
+ "alpha": null,
+ "arm": "perm",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5375862,
+ "n_artefact": 1380864,
+ "frac_artefact": 0.2568637364575207,
+ "p_own": 0.6190951262569198,
+ "p_other": 0.5656547018368543,
+ "kappa": 0.05344042442006544,
+ "kappa_pixel": 0.05393822589703211,
+ "n_pixels_A": 1380864,
+ "omega": 0.10216666445824986,
+ "n_instances": 17059065
+}

@@ -1,0 +1,30 @@
+scoring 231 runs matching 'j1_*'
+cells 77, seeds per cell 3, runs represented 231 of 231
+
+==============================================================================================
+DOES THE ARTEFACT COST ANYTHING AGAINST HUMAN TRUTH?
+  mIoU against expert labels, mosaic scored: one decision per source
+  pixel by majority vote of covering crops, scored once
+==============================================================================================
+event              a000       a025       a050       a075       a100       offc       perm
+Bolivia          0.8143     0.8203     0.8061     0.7597     0.5233     0.8221     0.5937
+Ghana            0.7333     0.7251     0.7113     0.6528     0.3227     0.7069     0.4116
+India            0.7262     0.7229     0.6875     0.5914     0.4326     0.7243     0.4544
+Mekong           0.8647     0.8528     0.8401     0.8033     0.5257     0.8606     0.5685
+Nigeria          0.7691     0.7500     0.7450     0.6712     0.4336     0.7367     0.5129
+Pakistan         0.4866     0.4840     0.4689     0.4338     0.3786     0.5383     0.3394
+Paraguay         0.7045     0.6890     0.6789     0.5893     0.4187     0.7104     0.3791
+Somalia          0.4806     0.4636     0.4530     0.4288     0.3504     0.4799     0.2971
+Spain            0.8007     0.7490     0.6758     0.5662     0.4557     0.7819     0.4646
+Sri-Lanka        0.7799     0.7462     0.7135     0.6516     0.4332     0.7963     0.4490
+USA              0.6890     0.6571     0.6195     0.5013     0.3790     0.7089     0.3688
+----------------------------------------------------------------------------------------------
+mean             0.7135     0.6964     0.6727     0.6045     0.4231     0.7151     0.4399
+
+  columns are named arms, not a dial: the end-to-end difference
+  is computed by name in s1fc_j1_summary.py, not from column order.
+
+  arms are named, not dial settings: the kappa-versus-damage
+  correlation across a dial is not defined here and is skipped.
+
+wrote <repo>/runs_s1fc/damage_summary.json

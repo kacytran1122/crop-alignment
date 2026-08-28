@@ -1,0 +1,23 @@
+{
+ "run": "arch_mit_b0_a000_Somalia_s42",
+ "event": "Somalia",
+ "alpha": null,
+ "arm": "a000",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5374091,
+ "n_artefact": 1377871,
+ "frac_artefact": 0.2563914529917711,
+ "p_own": 0.5761525669961423,
+ "p_other": 0.5751628287429331,
+ "kappa": 0.0009897382532091552,
+ "kappa_pixel": 0.0009471443094220616,
+ "n_pixels_A": 1377871,
+ "omega": 0.02266513327402799,
+ "n_instances": 16798915
+}

@@ -1,5 +1,8 @@
 # Python
 __pycache__/
+.release_identities
+release/
+release_anon.zip
 *.py[cod]
 .pytest_cache/
 .mypy_cache/

@@ -1,0 +1,39 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+acquisition & $\kap$ treated & $\kap$ control & difference & $\Omega$ tr. & $\Omega$ ct. & $|\A|$ \% \\
+\midrule
+20191103184432 & +0.2019 & +0.0051 & +0.1968 & 0.0573 & 0.0185 & 7.4 \\
+20191104195311 & +0.1568 & +0.0025 & +0.1544 & 0.0415 & 0.0171 & 13.1 \\
+20191106190152 & +0.1952 & +0.0118 & +0.1833 & 0.0572 & 0.0344 & 12.1 \\
+20191111200211 & +0.0413 & +0.0000 & +0.0413 & 0.1454 & 0.0000 & 4.0 \\
+20191113191053 & +0.2257 & +0.0155 & +0.2102 & 0.0308 & 0.0227 & 7.5 \\
+20191115195353 & +0.1105 & +0.0296 & +0.0809 & 0.0933 & 0.0640 & 23.1 \\
+20191116192813 & +0.1759 & +0.0052 & +0.1707 & 0.0465 & 0.0256 & 11.5 \\
+20191117190234 & +0.1218 & +0.0066 & +0.1152 & 0.0662 & 0.0396 & 20.4 \\
+20191118183654 & +0.0955 & +0.0139 & +0.0816 & 0.1289 & 0.0861 & 27.0 \\
+20191119194532 & +0.0632 & +0.0141 & +0.0491 & 0.0496 & 0.0446 & 14.1 \\
+20191120191952 & +0.2216 & +0.0031 & +0.2185 & 0.0246 & 0.0114 & 5.9 \\
+20191121185413 & +0.1436 & +0.0052 & +0.1384 & 0.0400 & 0.0226 & 10.5 \\
+20191122182834 & +0.1327 & +0.0079 & +0.1249 & 0.0523 & 0.0182 & 12.1 \\
+20191123180255 & +0.1934 & +0.0104 & +0.1830 & 0.0552 & 0.0398 & 9.5 \\
+20191124191133 & +0.1812 & +0.0201 & +0.1611 & 0.0480 & 0.0265 & 7.7 \\
+20191126182014 & +0.2301 & +0.0101 & +0.2201 & 0.0302 & 0.0173 & 7.3 \\
+20191127175434 & +0.0903 & +0.0048 & +0.0855 & 0.1083 & 0.0461 & 31.6 \\
+\midrule
+mean & +0.1518 & +0.0097 & +0.1421 & 0.0632 & 0.0314 & 13.2 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Every sea-ice fold in the optical-only primary arm (seed 42). The treated
+model trains on the per-patch labels, the control on labels regenerated once per
+scene, both on identical pixels. The difference column is what the paper reports:
+mean +0.1421, descriptive sd 0.0585, positive in 17 of 17 dependent folds. $|\A|$ is
+the artefact set as a percentage of covered pixels. The photon-enabled seed-7
+sensitivity is reported separately rather than averaged into this table.}
+\label{tab:perfold}
+\end{table}

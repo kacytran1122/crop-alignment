@@ -1,0 +1,104 @@
+\section{Verifying the estimator, and bounding its scope}
+\label{sec:verify}
+
+\subsection{A case with a known answer}
+
+\cref{prop:null} supplies something rarer than a null: an input whose correct output
+is known before looking, which gives a direct test of the code. A
+per-pixel threshold on chip-level smoothed VH reads one pixel value and cannot see a
+window, so it is exactly crop-invariant. The estimator
+must return zero.
+
+Measured on four held-out flood events, on the same artefact set as every other arm
+and between 9.5 and 41 million deterministic crop-pixel reads per event, $|\kap|$ stays below
+$1.4 \times 10^{-15}$ and $\Omega$ is exactly zero in all four. What remains is accumulated
+floating-point rounding.
+
+An error in the $(m-1)$ normaliser, the own-versus-other bookkeeping or the
+artefact-set mask surfaces here as a nonzero number. Not every error does: the
+weighting and lifecycle faults can pass this arm, so the released suite tests
+them separately with a nonuniform-coverage exact-value case and lifecycle
+regressions.
+
+\subsection{Which labelling rules can produce the artefact}
+\label{sec:survey}
+
+The artefact set depends only on a labelling rule and a crop grid, not on any model,
+so it can be computed on imagery we did not assemble and without training anything.
+We ran six rules used in SAR water mapping over 445 of the 446 released Sen1Floods11
+chips, one having no valid backscatter, applying each rule separately inside every
+crop of a $128 \times 128$ stride-32 grid and measuring $P(\A)$: the share of
+covered source pixels whose valid covering-crop labels disagree.
+
+\begin{table}[tb]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.4pt}
+\begin{tabular}{lccc}
+\toprule
+labelling rule & fit inside crop? & mean $P(\A)$ & max \\
+\midrule
+fixed global constant        & no  & $0.00\%$  & $0.00\%$ \\
+Otsu, computed per scene     & no  & $0.00\%$  & $0.00\%$ \\
+Otsu, computed per crop      & yes & $17.58\%$ & $40.90\%$ \\
+$k$-means, per crop          & yes & $17.65\%$ & $40.70\%$ \\
+45th percentile, per crop    & yes & $16.02\%$ & $32.49\%$ \\
+min-max per crop, then fixed & yes & $12.54\%$ & $54.82\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Artefact set produced by six labelling rules on 445 public Sen1Floods11
+chips, 169 crops each. Mean and maximum are over chips after excluding the one chip
+with no valid backscatter. No model is involved. A rule with $P(\A) = 0$ leaves
+$\kap$ undefined rather than zero: there is nothing to average over.}
+\label{tab:survey}
+\end{table}
+
+The $17.58\%$ here and the $24.71\%$ calibration reference in
+\cref{tab:calib} are not interchangeable prevalence estimates. This survey fits
+Otsu to raw VH, skips failed crops and averages chip-level fractions over 445 chips.
+The calibration uses a $9\times9$-smoothed field with finite fallbacks on a common
+440-chip set, pools source pixels within each event, then averages the eleven event
+fractions.
+
+\paragraph{Two further surveys.} The four crop-adaptive rules in \cref{tab:survey}
+fit a threshold or normalisation inside each crop.
+Labels built from foundation-model masks do the opposite, fixing the threshold and
+recomputing the \emph{segmentation}: SAM run inside each crop of 37 chips reads nonzero
+on all 37, median $1.13\%$ and mean $8.80\%$, up to $43.64\%$, where the same regions
+computed once per scene read exactly $0.00\%$. This is an out-of-distribution stress
+test of natural-image SAM on duplicated SAR channels; we do not interpret it as a
+prevalence estimate. A
+third moves to 342 public CloudSEN12+ patches~\cite{aybar2024cloudsen12plus} and cloud
+masking. On a $128\times128$, stride-32 grid (144 crops per $509\times509$ patch), the
+same clear-sky percentile fitted per crop instead of per scene reads $26.57\%$ and
+loses $0.079$ of balanced accuracy against that dataset's expert masks. Accuracy is
+reported there because $P(\A)$ counts whether covering crops agree, not whether they
+are right, so a labeller calling everything cloud would score a perfect zero.
+
+The zeros are exact, on every chip and in all three surveys. Otsu is the same
+estimator in rows two and three of \cref{tab:survey} and differs only in the pixels it
+is computed over. Applying a labeller per crop is therefore not what creates the
+hazard. Context-sensitive computation inside the crop is, whether a threshold, a
+normalisation, a background estimate or the segmentation itself, and that is a
+narrower and more actionable thing to check for.
+
+\subsection{\texorpdfstring{$\kap$}{kappa} is relative to the crop grid}
+\label{sec:grid}
+
+How densely crops are sampled is a choice we made, so we thinned the evaluation grid
+from stride 32 to stride 64 on identical models and labels, recomputing nothing. The
+contrast rises from $+0.2666$ to $+0.4587$, a factor of $1.72$, while the two
+geometries still order the eleven events at Spearman $r = +0.918$: the magnitude moves
+and the ranking survives. The supplement gives the mechanism.
+
+The encoder moves it little. Both ends rerun with a transformer encoder and with a
+second convolutional one stay positive in 11 of 11 events, at $+0.2966$ and $+0.2943$
+against $+0.2666$ for the U-Net on seed 42, with trained-control values empirically
+near zero in all three. The sign and rough size survive; both replacements read about $10\%$
+above the U-Net. We report this gap without an equivalence test. The trained controls are
+empirically near zero; only the crop-invariant predictor in \cref{prop:null} has an
+exactly zero theoretical value.
+
+So $\kap$ compares arms sharing one crop geometry: its magnitude does not travel
+between papers that tile differently, and without a crop size and stride it cannot
+be read.

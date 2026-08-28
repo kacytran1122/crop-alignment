@@ -1,0 +1,23 @@
+{
+ "run": "j1_offc_Paraguay_s7",
+ "event": "Paraguay",
+ "alpha": null,
+ "arm": "offc",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 16626431,
+ "n_artefact": 4285431,
+ "frac_artefact": 0.2577480999981295,
+ "p_own": 0.5437182141614784,
+ "p_other": 0.5426659470223165,
+ "kappa": 0.0010522671391619493,
+ "kappa_pixel": 0.0009771359775770138,
+ "n_pixels_A": 4285431,
+ "omega": 0.015330177047921643,
+ "n_instances": 52325582
+}

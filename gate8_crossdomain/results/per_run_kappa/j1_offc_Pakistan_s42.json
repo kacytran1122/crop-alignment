@@ -1,0 +1,23 @@
+{
+ "run": "j1_offc_Pakistan_s42",
+ "event": "Pakistan",
+ "alpha": null,
+ "arm": "offc",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5375862,
+ "n_artefact": 1380864,
+ "frac_artefact": 0.2568637364575207,
+ "p_own": 0.5795914957824476,
+ "p_other": 0.5814588934138971,
+ "kappa": -0.001867397631449534,
+ "kappa_pixel": -0.0020712087329074896,
+ "n_pixels_A": 1380864,
+ "omega": 0.02658211122106436,
+ "n_instances": 17059065
+}

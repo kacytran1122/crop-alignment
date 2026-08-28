@@ -1,0 +1,18 @@
+446 chips, crop 128 stride 32 -> 13x13 = 169 crops per chip
+  100/446
+  200/446
+  300/446
+  400/446
+<repo>/src/s1f_crop_labels.py:118: RuntimeWarning: All-NaN slice encountered
+  rng = np.nanmax(sp, axis=1) - np.nanmin(sp, axis=1)
+
+chip threshold   mean -18.45 dB   sd 2.81
+within-chip crop threshold spread (max - min)
+  mean 6.13 dB   median 5.84   p90 10.08   max 20.71
+  crops falling back to the chip threshold: 3345 of 75374
+
+A spread of this size is what the dial has to work with: at alpha=1
+two crops covering the same pixel can disagree by that many dB of
+threshold, and every pixel between them flips class depending on which
+crop the label was computed in.
+wrote <repo>/data/sen1floods11/cache/crop

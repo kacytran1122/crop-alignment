@@ -1,0 +1,27 @@
+\section{Association with expert-label performance}
+\label{sec:cost}
+
+The models of \Cref{sec:calib} were trained, validated and tested inside their own
+algorithmic label field. We additionally score each model against the expert labels
+that Sen1Floods11 ships, without new training. A mosaic majority vote gives one
+decision per source pixel before comparison; patch scoring would count each pixel
+about sixteen times and reward the crop-specific target repeatedly.
+
+Expert-label mIoU decreases monotonically from $0.714$ to $0.423$ across the
+constructed dial, an endpoint difference of $-0.2905$ (descriptive sd $0.0918$),
+with the same direction in all eleven held-out events. This is the combined result of
+replacing published event thresholds with predominantly per-crop Otsu labels. It is
+not the causal cost of crop-dependence: the endpoint also moves the mean threshold by
+4.00\,dB and changes class balance, boundaries and raw label quality.
+
+After subtracting each event's mean, $\kap$ and expert-label mIoU have descriptive
+$r=-0.928$ and a slope of $-1.05$ mIoU per unit $\kap$ across the five dial levels.
+Because $\alpha$ jointly drives both axes, this is a joint dose response, not evidence
+that $\kap$ predicts damage beyond the dial. Fixed-$\alpha$ correlations do not give
+that stronger result: their average is $-0.196$, with signs ranging from $+0.774$ at
+$\alpha=0$ to $-0.087$ at $\alpha=1$.
+
+The within-chip scramble gives a limited sensitivity check. In its one threshold
+reassignment, 94\% of the endpoint mIoU difference remained while the alignment fell
+to 26\%. Since the mapping allows fixed points, overlapping donor crops and same-chip
+spatial dependence, we do not interpret that contrast as isolating a mechanism.

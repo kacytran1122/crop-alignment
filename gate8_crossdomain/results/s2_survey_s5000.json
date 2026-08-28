@@ -1,0 +1,50 @@
+{
+ "crop": 128,
+ "stride": 32,
+ "scale": 5000.0,
+ "n_chips": 446,
+ "clipped_fraction": 0.00775456107785349,
+ "unlabelled_pixels": 0,
+ "arms": {
+  "stage 1 only, fixed HSV constants": {
+   "mean": 0.0,
+   "max": 0.0,
+   "n_chips": 446
+  },
+  "full pipeline, fitted per crop": {
+   "mean": 0.37479071054045215,
+   "max": 0.6023414248511905,
+   "n_chips": 446
+  },
+  "scene background": {
+   "mean": 0.2069962424344037,
+   "max": 0.4420379154265873,
+   "n_chips": 446
+  },
+  "scene Otsu": {
+   "mean": 0.2674400323616227,
+   "max": 0.5244256882440477,
+   "n_chips": 446
+  },
+  "scene first normalisation": {
+   "mean": 0.37479071054045215,
+   "max": 0.6023414248511905,
+   "n_chips": 446
+  },
+  "scene second normalisation": {
+   "mean": 0.37479071054045215,
+   "max": 0.6023414248511905,
+   "n_chips": 446
+  },
+  "scene background and Otsu": {
+   "mean": 0.06178845754424248,
+   "max": 0.42376612103174605,
+   "n_chips": 446
+  },
+  "everything fitted per scene": {
+   "mean": 0.0,
+   "max": 0.0,
+   "n_chips": 446
+  }
+ }
+}

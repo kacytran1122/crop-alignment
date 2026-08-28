@@ -1,0 +1,23 @@
+{
+ "run": "j1_a075_Mekong_s7",
+ "event": "Mekong",
+ "alpha": null,
+ "arm": "a075",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 7129920,
+ "n_artefact": 1580664,
+ "frac_artefact": 0.22169449306584085,
+ "p_own": 0.6037607458244691,
+ "p_other": 0.5655558796719858,
+ "kappa": 0.03820486615248337,
+ "kappa_pixel": 0.03929882839746037,
+ "n_pixels_A": 1580664,
+ "omega": 0.022803372381763512,
+ "n_instances": 19770121
+}

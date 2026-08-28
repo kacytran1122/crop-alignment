@@ -1,0 +1,14 @@
+{
+ "invocation": "fig_mechanism_real.py --scan --scenes 12 --sites 10",
+ "seed": 0,
+ "n_sites": 61,
+ "n_nonempty": 53,
+ "median": 0.012261284722222222,
+ "mean": 0.05702306750910747,
+ "max": 0.3889973958333333,
+ "figure_site": {
+  "scene": 4,
+  "row": 3985,
+  "col": 7906
+ }
+}

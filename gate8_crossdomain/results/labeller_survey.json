@@ -1,0 +1,43 @@
+{
+ "crop": 128,
+ "stride": 32,
+ "n_chips": 446,
+ "rules": {
+  "fixed global constant": {
+   "fitted": false,
+   "mean": 0.0,
+   "max": 0.0,
+   "n_chips": 445
+  },
+  "fixed, per scene (Otsu)": {
+   "fitted": false,
+   "mean": 0.0,
+   "max": 0.0,
+   "n_chips": 445
+  },
+  "per-crop Otsu": {
+   "fitted": true,
+   "mean": 0.17584124457293246,
+   "max": 0.4090363033234127,
+   "n_chips": 445
+  },
+  "per-crop k-means": {
+   "fitted": true,
+   "mean": 0.17653376790100397,
+   "max": 0.407013423859127,
+   "n_chips": 445
+  },
+  "per-crop 45th percentile": {
+   "fitted": true,
+   "mean": 0.16016484512557289,
+   "max": 0.3249356708829365,
+   "n_chips": 445
+  },
+  "per-crop min-max, then fixed": {
+   "fitted": true,
+   "mean": 0.1254381391259372,
+   "max": 0.5481809585813492,
+   "n_chips": 445
+  }
+ }
+}

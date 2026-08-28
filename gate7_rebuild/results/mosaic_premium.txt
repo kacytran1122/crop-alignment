@@ -1,0 +1,23 @@
+======================================================================================================================
+THE ARTEFACT PREMIUM UNDER MOSAIC SCORING
+  every source pixel scored once, both arms on an identical pixel set,
+  one empty-class convention, reported both ways
+======================================================================================================================
+  standard LOAO s42      nanmean   n=17 premium +0.0182 t= 0.82 CI [-0.0286,+0.0650] boot [-0.0270,+0.0565] sign 14/17 p=0.0127
+  standard LOAO s42      zerofill  n=17 premium +0.0223 t= 1.14 CI [-0.0193,+0.0639] boot [-0.0176,+0.0571] sign 14/17 p=0.0127
+  standard LOAO s42      draw      n=17 premium +0.0109 t= 0.50 CI [-0.0356,+0.0573] boot [-0.0339,+0.0490] sign 14/17 p=0.0127
+  standard LOAO s42      draw_zerofill n=17 premium +0.0150 t= 0.77 CI [-0.0264,+0.0564] boot [-0.0248,+0.0495] sign 14/17 p=0.0127
+                         mean patch-pixel reuse avoided 33.09x
+  standard LOAO s7       nanmean   n=17 premium +0.0126 t= 0.41 CI [-0.0529,+0.0781] boot [-0.0548,+0.0586] sign 15/17 p=0.0023
+  standard LOAO s7       zerofill  n=17 premium +0.0273 t= 1.46 CI [-0.0123,+0.0668] boot [-0.0118,+0.0586] sign 15/17 p=0.0023
+  standard LOAO s7       draw      n=17 premium +0.0044 t= 0.15 CI [-0.0601,+0.0690] boot [-0.0623,+0.0501] sign 13/17 p=0.0490
+  standard LOAO s7       draw_zerofill n=17 premium +0.0191 t= 1.04 CI [-0.0198,+0.0579] boot [-0.0190,+0.0502] sign 13/17 p=0.0490
+                         mean patch-pixel reuse avoided 33.09x
+  standard LOAO s123                 0 complete folds, skipped
+  tile-disjoint s42      nanmean   n=17 premium +0.0202 t= 1.11 CI [-0.0183,+0.0588] boot [-0.0180,+0.0504] sign 14/17 p=0.0127
+  tile-disjoint s42      zerofill  n=17 premium +0.0242 t= 1.58 CI [-0.0083,+0.0567] boot [-0.0072,+0.0504] sign 14/17 p=0.0127
+  tile-disjoint s42      draw      n=17 premium +0.0127 t= 0.71 CI [-0.0255,+0.0510] boot [-0.0248,+0.0429] sign 14/17 p=0.0127
+  tile-disjoint s42      draw_zerofill n=17 premium +0.0167 t= 1.10 CI [-0.0156,+0.0491] boot [-0.0145,+0.0430] sign 14/17 p=0.0127
+                         mean patch-pixel reuse avoided 33.09x
+
+wrote <repo>/runs/mosaic_premium.json

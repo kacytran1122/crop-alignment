@@ -1,0 +1,23 @@
+{
+ "run": "j1_perm_Spain_s123",
+ "event": "Spain",
+ "alpha": null,
+ "arm": "perm",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 7727802,
+ "n_artefact": 2057116,
+ "frac_artefact": 0.26619677885121795,
+ "p_own": 0.6143662260332141,
+ "p_other": 0.551299941047586,
+ "kappa": 0.06306628498562811,
+ "kappa_pixel": 0.06240308780251837,
+ "n_pixels_A": 2057116,
+ "omega": 0.11718285969096114,
+ "n_instances": 25376421
+}

@@ -1,0 +1,23 @@
+{
+ "run": "j1_a075_Pakistan_s123",
+ "event": "Pakistan",
+ "alpha": null,
+ "arm": "a075",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 5375862,
+ "n_artefact": 1380864,
+ "frac_artefact": 0.2568637364575207,
+ "p_own": 0.7252125482844458,
+ "p_other": 0.6277417110715581,
+ "kappa": 0.09747083721288778,
+ "kappa_pixel": 0.10054555445571504,
+ "n_pixels_A": 1380864,
+ "omega": 0.06500474203009388,
+ "n_instances": 17059065
+}

@@ -1,0 +1,144 @@
+\section{Crop-label alignment}
+\label{sec:kappa}
+
+\subsection{Definition}
+
+A labeller produces, for each crop $c$ and each pixel $p$ inside it, a label
+$L_c(p)$. When it reads only the pixels inside the crop, two crops covering the same
+source pixel can assign it different labels. A predictor $f$ maps a pixel and the
+crop it is read in to a class, written $f(p \mid c)$.
+
+For a source pixel $p$, let $C(p)$ be the set of evaluated crops covering it and
+supplying a valid label, and
+$m(p) = |C(p)|$. The \emph{artefact set} is
+\begin{equation}
+\A = \{\, p : \exists\, c, c' \in C(p) \text{ with } L_c(p) \neq L_{c'}(p) \,\}.
+\label{eq:aset}
+\end{equation}
+Off $\A$ the labeller is locally single-valued and there is nothing to detect. A
+pixel covered by one crop can never enter $\A$, so $m(p) \geq 2$ throughout.
+
+For $p \in \A$ and $c \in C(p)$, with $\ind{\cdot}$ the indicator, define
+\begin{align}
+\own(p,c) &= \ind{f(p \mid c) = L_c(p)}, \label{eq:own}\\
+\oth(p,c) &= \frac{1}{m(p)-1} \sum_{c' \neq c} \ind{f(p \mid c) = L_{c'}(p)},
+\label{eq:oth}
+\end{align}
+where here and below sums over $c$ or $c'$ run over $C(p)$. \Cref{eq:own} asks
+whether the prediction matches the label of the crop being read, \cref{eq:oth} how
+often it matches another covering crop's label. Averaging those differences over
+\emph{source pixels},
+\begin{equation}
+\kap = \frac{1}{|\A|} \sum_{p \in \A} \frac{1}{m(p)}
+       \sum_{c \in C(p)} \big[\, \own(p,c) - \oth(p,c) \,\big].
+\label{eq:kappa}
+\end{equation}
+Each $p \in \A$ counts once. Averaging over $(p,c)$ instances instead gives
+$\kapcr$, the \emph{crop-read} weighting, in which a pixel counts once per covering
+crop; on $\A$, coverage runs from 2 to over 100, so the two differ. We report
+\cref{eq:kappa} throughout and $\kapcr$ in the supplement. This statistic lies in
+$[-1,1]$, is conditional on $p\in\A$, and is unrelated to Cohen's kappa despite the
+shared symbol. We therefore report its disagreement prevalence
+$P(\A)=|\A|/|\{p:m(p)>0\}|$ over evaluation-valid covered source pixels alongside
+the primary benchmark results: $\kap$ describes alignment severity where labels
+conflict, not how often conflict occurs.
+
+\subsection{The null is exact}
+
+\begin{proposition}
+\label{prop:null}
+Let $\A$ be non-empty and let $f$ be crop-invariant on $\A$, meaning
+$f(p \mid c) = f(p)$ for every $p \in \A$ and every $c \in C(p)$. Then
+$\kap = 0$ exactly.
+\end{proposition}
+
+\begin{proof}
+Fix $p \in \A$, write $m = m(p)$ and $y = f(p)$, which by hypothesis does not depend
+on the crop. For each class $k$ let $n_k = |\{ c \in C(p) : L_c(p) = k \}|$, so that
+$\sum_k n_k = m$. Summing \cref{eq:own} over the crops covering $p$,
+\begin{equation}
+\sum_{c} \own(p,c) = \sum_{c} \ind{y = L_c(p)} = n_y .
+\label{eq:sumown}
+\end{equation}
+Summing \cref{eq:oth} and exchanging the order of summation,
+\begin{align}
+\sum_{c} \oth(p,c)
+  &= \frac{1}{m-1} \sum_{c} \sum_{c' \neq c} \ind{y = L_{c'}(p)} \nonumber \\
+  &= \frac{1}{m-1} \sum_{c'} \ind{y = L_{c'}(p)} \cdot (m-1) \nonumber \\
+  &= n_y ,
+\label{eq:sumoth}
+\end{align}
+because each $c'$ is counted once for every $c$ other than itself, that is $m-1$
+times, and the normaliser cancels it.
+
+So \cref{eq:sumown} and \cref{eq:sumoth} agree at every $p \in \A$, and therefore
+\begin{equation}
+\sum_{c \in C(p)} \big[ \own(p,c) - \oth(p,c) \big] = n_y - n_y = 0
+\quad \text{for every } p \in \A .
+\label{eq:innerzero}
+\end{equation}
+\Cref{eq:kappa} is a weighted sum of that inner quantity, so it is $0$; and because
+\cref{eq:innerzero} holds pixel by pixel, \emph{any} weighting over $p$ gives $0$,
+including $\kapcr$.
+\end{proof}
+
+Nothing in the argument uses the number of classes, the label distribution, the
+coverage $m(p)$, or any property of the imagery; it needs only that $\A$ is
+non-empty, since $\kap$ averages over the source pixels in it. For fixed evaluated
+predictions, zero is an algebraic identity rather than a null distribution that must
+be simulated or estimated. This says nothing by itself about population uncertainty
+across scenes.
+
+\begin{corollary}
+\label{cor:dep}
+$\kap \neq 0$ certifies that $f$ is crop-dependent on $\A$.
+\end{corollary}
+
+The converse does not hold: $\kap$ sums signed contributions, so alignment and
+anti-alignment may cancel, and $\kap = 0$ does not certify crop-invariance.
+Attributing a positive $\kap$ specifically to the training-label construction needs
+the matched control of \Cref{sec:floor}. So the exact zero is an algebraic identity
+and a check on the code, a nonzero $\kap$ is directional, and our primary comparative
+conclusions use the treated arm minus its matched control.
+
+\subsection{Why the measured control is not zero}
+\label{sec:floor}
+
+A convolutional network reading crops is not a crop-invariant predictor. Zero
+padding at the crop border, receptive fields truncated at the window edge, and any
+normalisation computed over the crop all make $f(p \mid c)$ depend on $c$ near
+boundaries. This is not our observation: convolutional layers are known to read
+absolute position from padding~\cite{kayhan2020translation, islam2020position} and to
+develop border artefacts because of it~\cite{alsallakh2021mind}. We measure the
+consequence directly as $\Omega$, the probability that two crops covering the
+same pixel predict differently. Writing $P$ for the pixels with $m(p) \ge 2$,
+\begin{equation}
+\Omega = \frac{\sum_{p \in P} \sum_{c \neq c' \in C(p)}
+        \mathbf{1}[\, f(p \mid c) \neq f(p \mid c') \,]}
+       {\sum_{p \in P} m(p)\big(m(p) - 1\big)}.
+\label{eq:omega}
+\end{equation}
+The inner sum is over ordered crop pairs $(c,c')$; the denominator therefore has
+$m(p)(m(p)-1)$ terms for pixel $p$.
+It sums over every covered pixel rather than over $\A$, since it is a property of
+the model and is defined where the labels agree, and weights crop pairs uniformly
+rather than source pixels. It is shift consistency~\cite{zhang2019shiftinvariant} on
+overlapping windows, and reads $0.031$ for optical-only sea-ice models on repaired labels and
+$0.0108$ for flood models on the published ones.
+
+How far this lifts $\kap$ off zero depends on how crop-invariant the labels really
+are, and the two benchmarks answer differently. On flood labels regenerated from the
+published per-event threshold, which are crop-invariant exactly, a trained network
+reads $\kap = -0.0008$, empirically near the theoretical zero. On sea ice the
+optical-only repaired control reads $+0.0097$. That is consistent with the labels still
+inheriting a per-scene normalisation a $128 \times 128$ window can partly
+recover, though we have not isolated that from the other crop effects above.
+
+So the floor is not convolution alone: $\Omega$ is positive
+on both benchmarks while $\kap$ reads $-0.0008$ on one and $+0.0097$ on the other,
+which a resolution floor could not do. Crop-invariant training labels do not on their
+own hold $\kap$ at zero, and \cref{prop:null} does not say they do: it constrains
+predictors, not labels. The floor is an interaction of labels, model, crop grid and
+imagery, which is why every attribution claim below uses a contrast between a
+crop-dependent arm and its matched control on the same grid; raw values are shown to
+expose the floor.

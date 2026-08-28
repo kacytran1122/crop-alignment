@@ -1,0 +1,23 @@
+{
+ "run": "j1_perm_USA_s7",
+ "event": "USA",
+ "alpha": null,
+ "arm": "perm",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 7,
+ "n_covered": 17638830,
+ "n_artefact": 4285648,
+ "frac_artefact": 0.24296668203049748,
+ "p_own": 0.6589180517329029,
+ "p_other": 0.6101043990403331,
+ "kappa": 0.048813652692569785,
+ "kappa_pixel": 0.05148188020930952,
+ "n_pixels_A": 4285648,
+ "omega": 0.06861629944978653,
+ "n_instances": 52527151
+}

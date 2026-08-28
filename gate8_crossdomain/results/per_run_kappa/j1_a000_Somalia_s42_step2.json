@@ -1,0 +1,23 @@
+{
+ "run": "j1_a000_Somalia_s42",
+ "event": "Somalia",
+ "alpha": null,
+ "arm": "a000",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 2,
+ "grid_stride": 64,
+ "n_crops_per_chip": 49,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 5374091,
+ "n_artefact": 927410,
+ "frac_artefact": 0.1725705798431772,
+ "p_own": 0.5173549222717845,
+ "p_other": 0.5236228447898351,
+ "kappa": -0.00626792251805063,
+ "kappa_pixel": -0.006462801421880986,
+ "n_pixels_A": 927410,
+ "omega": 0.02487693327597272,
+ "n_instances": 3234990
+}

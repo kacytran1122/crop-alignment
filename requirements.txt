@@ -1,9 +1,36 @@
-# Artifact verification, figure generation, and PDF QA
-numpy>=1.26,<3
-scipy>=1.11,<2
-pandas>=2,<4
-pyarrow>=14,<30
-rasterio>=1.3,<2
-matplotlib>=3.8,<4
-pypdf>=5,<7
-pymupdf>=1.24,<2
+# Pinned to the versions the results in the paper were produced on, Python 3.12.3.
+# The unpinned list this replaced also omitted scipy, pyarrow, rasterio and
+# opencv, which the analysis imports, and named pillow, tqdm, jupyter and
+# nbconvert, which only the archived notebooks use. The exact versions lived only
+# in REPRODUCE.md, so `pip install -r requirements.txt` did not reproduce the
+# environment the numbers came from.
+#
+# torch and torchvision are CUDA 12.8 builds and need the PyTorch index:
+#   pip install torch==2.11.0 torchvision==0.26.0 \
+#       --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+#
+# The released estimator, cropalign.py, needs numpy alone. Nothing else here is
+# required to run it or its self-test.
+
+numpy==2.5.2
+scipy==1.18.0
+pandas==3.0.5
+pyarrow==25.0.1
+rasterio==1.5.1
+scikit-learn==1.9.0
+matplotlib==3.11.1
+opencv-python-headless==5.0.0.93
+segmentation_models_pytorch==0.5.0
+
+# Installed from the CUDA index above, listed here for the record:
+# torch==2.11.0+cu128
+# torchvision==0.26.0+cu128
+
+# The optional SAM OOD survey used Meta's segment-anything ViT-B code and the
+# checkpoint named in the supplement. Its retained output lacks a source commit
+# and checkpoint digest, so it is intentionally documented rather than falsely
+# pinned here; see REPRODUCE.md before attempting that survey.
+
+# Reading the built PDFs in the layout, presentation and anonymity gates:
+PyMuPDF==1.26.5

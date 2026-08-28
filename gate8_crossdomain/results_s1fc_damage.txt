@@ -1,0 +1,27 @@
+DOES THE ARTEFACT COST ANYTHING AGAINST HUMAN TRUTH?
+  mIoU against expert labels, mosaic scored: one decision per source
+  pixel by majority vote of covering crops, scored once
+==============================================================================================
+event            a=0.00     a=0.25     a=0.50     a=0.75     a=1.00
+Bolivia          0.7319     0.7041     0.7143     0.6039     0.5348
+Ghana            0.5758     0.4592     0.4494     0.4062     0.3329
+India            0.5565     0.5444     0.5204     0.4680     0.4228
+Mekong           0.6684     0.6944     0.6335     0.5889     0.5572
+Nigeria          0.5658     0.5361     0.5286     0.4898     0.4301
+Pakistan         0.3631     0.3782     0.3915     0.3787     0.3949
+Paraguay         0.4817     0.4610     0.4184     0.4270     0.4154
+Somalia          0.3302     0.3298     0.3566     0.3621     0.3505
+Spain            0.5280     0.4173     0.4918     0.4763     0.4348
+Sri-Lanka        0.5715     0.5376     0.5308     0.4852     0.4253
+USA              0.4768     0.3957     0.4031     0.3935     0.3890
+----------------------------------------------------------------------------------------------
+mean             0.5318     0.4962     0.4944     0.4618     0.4262
+
+  cost of full crop-dependence, alpha 1.00 minus alpha 0.00
+    mean -0.1056  sd 0.0821  t -4.27   9/11 events worse
+
+  kappa against mIoU-vs-expert, pooled   r = -0.522  (n=55)
+  within event, event means removed      r = -0.760
+  slope -0.5289 mIoU per unit kappa   se 0.0622   t -8.50
+
+wrote <repo>/runs_s1fc/damage_summary.json

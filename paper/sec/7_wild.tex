@@ -1,0 +1,88 @@
+\section{Applying and reconstructing two published labellers}
+\label{sec:wild}
+
+\subsection{What we recovered, and on whose data}
+\label{sec:recovery}
+
+\paragraph{Provenance, and which step is the culprit.} We are explicit about what is
+ours, because it bears on how far this generalises. The colour labeller is
+published~\cite{iqrah2023polar,iqrah2024parallel}, and so is the practice of cutting
+Sentinel-2 patches on ICESat-2 track points one pixel apart, which produces densely
+overlapping windows~\cite{lechamo2025multimodal}. The 17-acquisition assembly is ours:
+our co-location, our $128 \times 128$ geometry, our class-stratified subsample.
+
+The published colour thresholds are \emph{fixed constants}, and the released code
+applies them after splitting a scene into patches. What makes our label set
+crop-dependent is one stage earlier, a cloud and shadow removal that fits three
+quantities to the array it is handed: an Otsu threshold, a median-blur background
+estimate, and two min-max normalisations. Labelling per crop is not the hazard, since
+a fixed rule survives it. Context-sensitive computation inside the crop is what
+creates it, though not every
+fitted step contributes, and the experiments below identify which ones do.
+
+\paragraph{External imagery.} We tested the released labeller on the 446
+public Sen1Floods11 optical chips on the same stride-32 grid. Nothing is trained and
+input scaling is one global constant, so any $P(\A) > 0$ certifies crop dependence
+of the rule under this fixed preparation; the class names do not describe flood scenes and need not,
+since $P(\A)$ measures agreement among crops without judging correctness. Two arms
+serve as code controls: stage 1 alone, and the
+stage with every fitted quantity taken from the scene, are compositions of per-pixel
+functions and must read zero. Both do, exactly. Fitted per crop as released the stage
+reads $37.04\%$. Repairing its background and Otsu threshold cuts that by $88\%$ to
+$4.50\%$, but the worst chip falls only from $57.90\%$ to $40.07\%$, and the two
+normalisations, inert while the other quantities are fitted per crop, carry what is
+left: a partial repair is not a repair. The supplement ablates each step and varies
+the one preparation constant we chose, which the residual is sensitive to and the
+$37.04\%$ is not.
+
+\paragraph{Sea ice.} OpenCV hue ends at 179, below the published upper threshold of
+185, so only the value channel acts; a grid search recovers the water constant in all
+17 folds. Crop-dependence enters through the cloud and shadow stage, run here on
+$128 \times 128$ patches with a 155-pixel median kernel. Scene-wide regeneration
+raises crop unanimity from $0.9678$ to $1.0000$ in every fold.
+
+\paragraph{Floods.} Sen1Floods11 ships an expert label and an Otsu label for the
+same 446 chips, and unlike the sea-ice case it publishes the constant, so the
+recovery can be checked from outside. Thresholding the raw band leaves a bias of one
+sign on all eleven events, a systematic signature, and the supplement
+sweeps the smoothing radius to find it: a $9 \times 9$ focal mean before thresholding
+lands all eleven within $0.25$\,dB at $99.08\%$ agreement. The constant moves 5.57\,dB
+across events, so no global threshold can express it and a model seeing the whole
+chip can infer which event it is in and adapt.
+
+\subsection{Crop-label alignment on the sea-ice benchmark}
+
+Sea-ice crops overlap about 33 times, so a source pixel is seen inside many crops,
+and under the per-crop scheme those crops can disagree. Across all 17 folds, with
+$\A$ averaging 13.22\% of covered pixels and 23.9M deterministic crop-pixel reads per fold, the model
+trained on crop-noisy labels in the optical-only primary arm (seed 42) reads
+$\kap = +0.1518$. Its matched control, trained on repaired labels and evaluated on
+identical pixels, reads $+0.0097$. The mean paired difference is
+$\mathbf{+0.1421}$, and it is positive on each of the 17 dependent evaluation
+folds. A photon-enabled sensitivity at seed 7 reads a $+0.1454$ contrast, also
+positive in 17 of 17 folds. Because input mode and initialization change together,
+this serves only as a robustness check because it cannot estimate seed replication.
+\Cref{fig:wild} gives
+the optical-only primary per-fold results against their controls.
+
+We report that descriptively and attach no test to it. These 17 folds are overpasses
+of 39 tiles across 25 days sharing tiles, geography and almost all of their training
+data, so a $t$ or an interval over them would assume an independence the design does
+not provide. We therefore omit inferential summaries over folds.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=\linewidth]{figures/fig2_crop_alignment.png}
+\caption{Optical-only primary crop-label alignment (seed 42) per held-out
+acquisition. Red is the model trained on crop-noisy labels, blue its matched control
+trained on labels regenerated once per scene. Zero is the theoretical identity for
+crop-invariant predictors; the trained control is empirical and need not equal it.}
+\label{fig:wild}
+\end{figure}
+
+We do not express this as a fraction of the calibrated contrast of \Cref{sec:calib}:
+the two used different crop grids, and \Cref{sec:grid} shows a grid change moves the
+contrast by more than any such ratio would report. Two consistency checks follow. On
+the repaired label set $\A$ is empty, since crop unanimity of $1.0000$ means every
+covering crop agrees. And $\Omega$ is exactly zero for the two-parameter threshold,
+whose value channel is a per-pixel function of per-fold constants.

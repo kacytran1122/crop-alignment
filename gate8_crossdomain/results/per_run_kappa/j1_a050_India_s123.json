@@ -1,0 +1,23 @@
+{
+ "run": "j1_a050_India_s123",
+ "event": "India",
+ "alpha": null,
+ "arm": "a050",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 1,
+ "grid_stride": 32,
+ "n_crops_per_chip": 169,
+ "eval_alpha": 1.0,
+ "seed": 123,
+ "n_covered": 14950528,
+ "n_artefact": 3361956,
+ "frac_artefact": 0.2248720580303251,
+ "p_own": 0.554086637276879,
+ "p_other": 0.5466565460002379,
+ "kappa": 0.0074300912766411134,
+ "kappa_pixel": 0.007521435650640798,
+ "n_pixels_A": 3361956,
+ "omega": 0.02258860277925385,
+ "n_instances": 41051221
+}

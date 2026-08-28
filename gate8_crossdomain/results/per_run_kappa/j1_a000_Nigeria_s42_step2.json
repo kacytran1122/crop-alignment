@@ -1,0 +1,23 @@
+{
+ "run": "j1_a000_Nigeria_s42",
+ "event": "Nigeria",
+ "alpha": null,
+ "arm": "a000",
+ "norm_source": "fold-local",
+ "predictor": "model",
+ "grid_step": 2,
+ "grid_stride": 64,
+ "n_crops_per_chip": 49,
+ "eval_alpha": 1.0,
+ "seed": 42,
+ "n_covered": 4020518,
+ "n_artefact": 606271,
+ "frac_artefact": 0.15079425089005943,
+ "p_own": 0.5237189827237917,
+ "p_other": 0.5236414081265519,
+ "kappa": 7.757459723982656e-05,
+ "kappa_pixel": -0.00011106144501933642,
+ "n_pixels_A": 606271,
+ "omega": 0.005392511840570753,
+ "n_instances": 2122688
+}
