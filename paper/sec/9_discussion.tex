@@ -1,14 +1,19 @@
 \section{Discussion}
 \label{sec:recs}
 
-Benchmark builders should fit contextual quantities on support containing all
+The practical fix is simple: fit contextual quantities on support containing all
 evaluation crops that cover a source pixel, persist one label per source pixel,
 split by the labeller's dependence unit, score each source pixel once, and report a
 context-free baseline. Reviewers should ask for $\kap$ on a stated crop grid with a
-matched control. The algebraic zero checks the diagnostic; the control is needed for
-attribution.
+matched control. The algebraic zero checks the diagnostic; the control separates
+excess alignment from an architecture floor.
 
-The diagnostic is narrow: it applies only where overlapping crops disagree, and it
-misses crop-invariant pseudo-label shortcuts, calibration failures and unrelated
-shortcuts. The calibration dial is constructed, sea ice lacks human reference
-labels, and folds are dependent.
+The limits are part of the claim. $\kap$ is grid-relative: changing the crop grid
+changes the disagreement set and can move the magnitude without retraining. The
+scramble arm preserves each chip's threshold multiset, but does not fully break
+threshold--image coupling. Folds share geography, tiles and training data, so we
+report signs and matched contrasts descriptively rather than fold-level inference.
+The diagnostic sees only locations where overlapping crop labels disagree; it misses
+crop-invariant pseudo-label shortcuts, calibration failures and unrelated shortcuts,
+and opposite signed regions can cancel. Sea ice has no human reference labels, so it
+shows excess alignment with crop-dependent labels, not expert-label harm.
